@@ -3,7 +3,7 @@ local Window = Library.CreateLib("Heaven Stand", "RJTheme3")
 
 -- 1 Section Teleporting
 local Tab = Window:NewTab("Teleporting")
-local Section = Tab:NewSection("Teleport")
+local Section = Tab:NewSection("Teleport"
 
 Section:NewDropdown("Teleport to bosses", "You teleport to the bosses.", {"Sakuya Izayoi", "DIO", "Silver Chariot Requiem", "Vergil", "Garou"}, function(teleport)
     if teleport == "Sakuya Izayoi" then
