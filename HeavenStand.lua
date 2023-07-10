@@ -81,9 +81,9 @@ end)
 -- Instant kill bosses
 Section:NewDropdown("Instant kill bosses", "You instantly kill bosses.", {"DIO", "Silver Chariot Requiem", "Garou"}, function(kill)
     if kill == "DIO" then
-        game:GetService("Workspace").Enemies["250 Health : S:Diavolo Dummy"].Humanoid.RigType = 1
+        game:GetService("Workspace").Enemies.DIO.Humanoid.RigType = 1
         wait(1)
-        game:GetService("Workspace").Enemies["250 Health : S:Diavolo Dummy"].Humanoid.RigType = 0
+        game:GetService("Workspace").Enemies.DIO.Humanoid.RigType = 0
 elseif kill == "Silver Chariot Requiem" then 
     game:GetService("Workspace").Enemies["Silver Chariot Requiem"].Humanoid.RigType = 1
     wait(1)
@@ -195,6 +195,9 @@ Section:NewToggle("Noclip", "You can walk through walls, objects, etc.", functio
         HRP.CanCollide = true
     end
 end)
+
+-- Disable Camera Movement
+game.Players.LocalPlayer.Settings["Camera_Movement"].Value = false
 
 -- Sit
 Section:NewKeybind("Sit", "You sit down.", Enum.KeyCode.V, function()
