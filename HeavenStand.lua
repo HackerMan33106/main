@@ -61,6 +61,7 @@ end)
 local Tab = Window:NewTab("Bosses")
 local Section = Tab:NewSection("Bosses")
 
+-- Boss slowdown
 Section:NewDropdown("Boss slowdown", "You slow down bosses a lot.", {"DIO", "Silver Chariot Requiem", "Garou"}, function(slow)
 
     if slow == "DIO" then
@@ -97,11 +98,11 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 3 Section Teleport to Box
+--- 3 Section Teleport to Items
 local Tab = Window:NewTab("Teleporting to items")
 local Section = Tab:NewSection("Teleport")
 
--- Box
+-- Teleport to box
 Section:NewDropdown("Teleport to Box", "You teleport to the box.", {"Box 1", "Box 2", "Box 3", "Box 4", "Box 5", "Box 6"}, function(box)
     if box == "Box 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(252.181274, 792.200134, -911.60022, 1, 0, 0, 0, -1, 0, 0, 0, -1)
@@ -118,7 +119,7 @@ elseif box == "Box 6" then
 end
 end)
 
--- Blindfold
+-- Teleport to blindfold
 Section:NewDropdown("Teleport to Blindfold", "You teleport to blindfold", {"Blindfold 1", "Blindfold 2", "Blindfold 3", "Blindfold 4"}, function(blindfold)
     if blindfold == "Blindfold 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424.152283, 791.303406, -810.273315, 0, 0, -1, 0, 1, 0, 1, 0, 0)
@@ -188,11 +189,6 @@ Section:NewToggle("Noclip", "You can walk through walls, objects, etc.", functio
     else
         Head.CanCollide = true
         Torso.CanCollide = true
-        LeftArm.CanCollide = true
-        RightArm.CanCollide = true
-        LeftLeg.CanCollide = true
-        RightLeg.CanCollide = true
-        HRP.CanCollide = true
     end
 end)
 
