@@ -177,29 +177,22 @@ elseif dummy == "Dummy 4" then
     end
 end)
 
--- Teleport to bosess
-Section:NewDropdown("Teleport to golem spawn", "You teleport to golem spawns.", {"Golem spawn 1", "Golem spawn 2", "Golem spawn 3"}, function(golems)
-    if golems == "Golem 1" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Terrestrial Construct 1"].HumanoidRootPart.CFrame
-elseif golems == "Golem 2" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Terrestrial Construct 2"].HumanoidRootPart.CFrame
-elseif golems == "Golem 3" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Terrestrial Construct 3"].HumanoidRootPart.CFrame
-    end
-end)
-
--- Teleport to Golems spawn
-Section:NewDropdown("Teleport to golem spawn", "You teleport to golem spawns.", {"Golem spawn 1", "Golem spawn 2", "Golem spawn 3"}, function(gs)
+-- Teleport to golems spawn
+Section:NewDropdown("Teleport to golems", "You teleport to golems.", {"Golem spawn 1", "Golem spawn 2", "Golem spawn 3"}, function(gs)
     if gs == "Golem spawn 1" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3181.20532, 1048.01428, -926.75708, 0.93574053, -0, -0.352689117, 0, 1, -0, 0.352689117, 0, 0.93574053)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2785.72046, 985.514282, -1257.67944, 0.93574053, -0, -0.352689117, 0, 1, -0, 0.352689117, 0, 0.93574053)
 elseif gs == "Golem spawn 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2422.44556, 982.764282, -1404.69751, 0.93574053, -0, -0.352689117, 0, 1, -0, 0.352689117, 0, 0.93574053)
 elseif gs == "Golem spawn 3" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2785.72046, 985.514282, -1257.67944, 0.93574053, -0, -0.352689117, 0, 1, -0, 0.352689117, 0, 0.93574053)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3181.20532, 1048.01428, -926.75708, 0.93574053, -0, -0.352689117, 0, 1, -0, 0.352689117, 0, 0.93574053)
     end
 end)
 
---- 3 Teleport to items
+--- 3 Teleport to items and etc.
+local Tab = Window:NewTab("Items and etc.")
+local Section = Tab:NewSection("Items and etc.")
+
+-- Sand pile
 Section:NewDropdown("Teleport to sand pile", "You teleport to a pile of sand.", {"Sand pile 1", "Sand pile 2", "Sand pile 3", "Sand pile 4"}, function(sp)
     if sp == "Sand pile 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2396.073, 877.422974, -2112.48193, 1, 0, 0, 0, 1, 0, 0, 0, 1)
