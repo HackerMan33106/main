@@ -84,17 +84,17 @@ end)
 -- Teleport to rokakaka trees
 Section:NewDropdown("Teleport to rokakaka trees", "You teleport to the rokkakaka trees.", {"Tree 1", "Tree 2", "Tree 3", "Tree 4", "Tree 5", "Tree 6"}, function(rt)
     if rt == "Tree 1" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1144.59851, 770.58197, -687.196716, -0.870877862, 0, -0.491499782, 0, 1, 0, 0.491499782, 0, -0.870877862)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1144.59851, 765.504211, -687.196716, -0.870877743, -1.21682469e-08, -0.491499722, 6.10492457e-09, 1, -3.55745655e-08, 0.491499722, -3.39816673e-08, -0.870877743)
 elseif rt == "Tree 2" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1126.3905, 763.929199, -652.211304, 0.246517122, -0, -0.969138443, 0, 1, -0, 0.969138443, 0, 0.246517122)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1126.14307, 769.019104, -652.394226, -0.569854438, 5.42213243e-08, -0.821745694, 4.30509708e-08, 1, 3.61286219e-08, 0.821745694, -1.47888937e-08, -0.569854438)
 elseif rt == "Tree 3" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1491.88586, 759.919067, -729.295776, 0.584528744, -0, -0.811372995, 0, 1, -0, 0.811372995, 0, 0.584528744)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1491.41931, 764.752075, -729.650635, 0.300007761, 6.84150763e-08, -0.953936756, -9.78955939e-09, 1, 6.86399133e-08, 0.953936756, -1.12538858e-08, 0.300007761)
 elseif rt == "Tree 4" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1453.09534, 761.593079, -123.305298, 0.86761117, 0, 0.497243285, 0, 1, 0, -0.497243285, 0, 0.86761117)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1453.21313, 766.708862, -123.495041, 0.979225576, 3.7545508e-08, 0.202773884, -5.30831414e-08, 1, 7.11869887e-08, -0.202773884, -8.04719988e-08, 0.979225576)
 elseif rt == "Tree 5" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1445.53418, 759.919067, -157.57959, -0.497193217, 0, 0.86763984, 0, 1, 0, -0.86763984, 0, -0.497193217)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1445.74438, 764.864746, -157.637665, 0.966194451, 1.78608719e-08, 0.257814407, -3.80548526e-09, 1, -5.50164501e-08, -0.257814407, 5.21754799e-08, 0.966194451)
 elseif rt == "Tree 6" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-636.522217, 761.593079, -917.723389, 0.681215882, -0, -0.732082725, 0, 1, -0, 0.732082725, 0, 0.681215882)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-636.417419, 766.538391, -918.262573, 0.569859982, 2.63670916e-08, -0.821741819, -1.0599237e-08, 1, 2.47364937e-08, 0.821741819, -5.38650147e-09, 0.569859982)
     end
 end)
 
@@ -141,17 +141,17 @@ end)
 -- Teleport to blight geode
 Section:NewDropdown("Teleport to blight geode", "You teleport to the blight geode.", {"Blight geode 1", "Blight geode 2", "Blight geode 3", "Blight geode 4", "Blight geode 5", "Blight geode 6"}, function(bg)
     if bg == "Blight geode 1" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1438.74194, 829.802979, -882.098022, -0.32580328, 0, 0.945437908, 0, 1, 0, -0.945437908, 0, -0.32580328)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1439.32947, 837, -882.814514, 0.41675356, -0.000575092039, -0.909019351, 0.00141216966, 0.999998987, 1.47799701e-05, 0.909018397, -0.00128984905, 0.416753978)
 elseif bg == "Blight geode 2" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1807.35498, 906.450989, -729.804077, -0.992338657, 0, 0.123548441, 0, 1, 0, -0.123548441, 0, -0.992338657)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1807.35632, 914, -729.803772, -0.992264271, 8.93411998e-05, 0.124143414, 1.29116597e-05, 0.999999821, -0.0006164597, -0.124143444, -0.000610087998, -0.992264092)
 elseif bg == "Blight geode 3" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2010.83801, 871.26001, -1079.21399, -0.848583698, 0, 0.529061794, 0, 1, 0, -0.529061794, 0, -0.848583698)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2010.83801, 879, -1079.21399, -0.848583698, 0, 0.529061794, 0, 1, 0, -0.529061794, 0, -0.848583698)
 elseif bg == "Blight geode 4" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1335.40295, 829.802979, -760.411011, 0.00438994169, 0, 0.999990404, 0, 1, 0, -0.999990404, 0, 0.00438994169)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1335.40295, 837, -760.411011, 0.00438994169, 0, 0.999990404, 0, 1, 0, -0.999990404, 0, 0.00438994169)
 elseif bg == "Blight geode 5" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1700.76404, 898.721985, -523.140015, -0.895974874, 0, 0.444104999, 0, 1, 0, -0.444104999, 0, -0.895974874)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1700.76404, 906, -523.140015, -0.895974874, 0, 0.444104999, 0, 1, 0, -0.444104999, 0, -0.895974874)
 elseif bg == "Blight geode 6" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1876.13196, 898.721985, -566.901001, 0.979354441, -0, -0.202150509, 0, 1, -0, 0.202150509, 0, 0.979354441)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1876.13196, 906, -566.901001, 0.979354441, -0, -0.202150509, 0, 1, -0, 0.202150509, 0, 0.979354441)
     end
 end)
 
@@ -195,13 +195,13 @@ local Section = Tab:NewSection("Items and etc.")
 -- Sand pile
 Section:NewDropdown("Teleport to sand pile", "You teleport to a pile of sand.", {"Sand pile 1", "Sand pile 2", "Sand pile 3", "Sand pile 4"}, function(sp)
     if sp == "Sand pile 1" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2396.073, 877.422974, -2112.48193, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2396.06396, 882.5, -2112.48145, 0.999994814, -0.00149020599, -0.00285724876, 0.00147085183, 0.999976039, -0.00676388619, 0.00286725978, 0.00675964821, 0.999973059)
 elseif sp == "Sand pile 2" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2759.67749, 877.423035, -2275.10474, -0.731953859, 0, -0.681354284, 0, 1, 0, 0.681354284, 0, -0.731953859)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2759.68213, 882.5, -2275.11035, -0.731966197, -0.00173868833, -0.681338727, 0.000427788997, 0.999995351, -0.00301143527, 0.681340814, -0.00249573798, -0.731962085)
 elseif sp == "Sand pile 3" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2914.19214, 877.422974, -2455.7085, 0.0719054341, 0, 0.99741143, 0, 1, 0, -0.99741143, 0, 0.0719054341)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2914.19214, 882.5, -2455.7085, 0.0719054341, 0, 0.99741143, 0, 1, 0, -0.99741143, 0, 0.0719054341)
 elseif sp == "Sand pile 4" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2170.56641, 943.422974, -2047.85132, 0.0760170817, -0, -0.997106493, 0, 1, -0, 0.997106493, 0, 0.0760170817)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2170.56641, 948.5, -2047.85132, 0.0760170817, -0, -0.997106493, 0, 1, -0, 0.997106493, 0, 0.0760170817)
     end
 end)
 
