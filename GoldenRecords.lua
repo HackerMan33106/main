@@ -178,7 +178,7 @@ elseif dummy == "Dummy 4" then
 end)
 
 -- Teleport to golems spawn
-Section:NewDropdown("Teleport to golems", "You teleport to golems.", {"Golem spawn 1", "Golem spawn 2", "Golem spawn 3"}, function(gs)
+Section:NewDropdown("Teleport to golems spawn", "You teleport to golems spawn.", {"Golem spawn 1", "Golem spawn 2", "Golem spawn 3"}, function(gs)
     if gs == "Golem spawn 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2785.72046, 985.514282, -1257.67944, 0.93574053, -0, -0.352689117, 0, 1, -0, 0.352689117, 0, 0.93574053)
 elseif gs == "Golem spawn 2" then
