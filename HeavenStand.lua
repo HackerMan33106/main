@@ -132,6 +132,19 @@ elseif blindfold == "Blindfold 4" then
 end
 end)
 
+-- Teleport to dualknife
+Section:NewDropdown("Teleport to Dualknife", "You teleport to dualknife", {"Dualknife 1", "Dualknife 2", "Dualknife 3", "Dualknife 4"}, function(dualknife)
+    if dualknife == "Dualknife 1" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(299.760712, 792.415833, 261.022156, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+elseif dualknife == "Dualknife 2" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(547.744202, 791.985535, -821.212585, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+elseif dualknife == "Dualknife 3" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(643.043152, 791.985657, -535.28949, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+elseif dualknife == "Dualknife 4" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(303.266785, 790.952881, -751.520386, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+end
+end)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 --- 4 Section Misc
