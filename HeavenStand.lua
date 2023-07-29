@@ -17,7 +17,7 @@ elseif teleport == "Garou" then
 end)
 
 -- Teleport to NPC
-Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Genos", "Inosuke"}, function(npc)
+Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master"}, function(npc)
     if npc == "Shop" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Shop.HumanoidRootPart.CFrame
 elseif npc == "Seller" then
@@ -26,10 +26,8 @@ elseif npc == "Pucci" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Pucci.HumanoidRootPart.CFrame
 elseif npc == "RaymondZl" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.RaymondZl.HumanoidRootPart.CFrame
-elseif npc == "Genos" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Genos.HumanoidRootPart.CFrame
-elseif npc == "Inosuke" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Inosuke.HumanoidRootPart.CFrame
+elseif npc == "Boxing Master" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC["Boxing Master"].HumanoidRootPart.CFrame
     end
 end)
 
