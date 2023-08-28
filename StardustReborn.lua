@@ -142,17 +142,8 @@ end)
 Section:NewButton("Noclip on", "You can walk through walls, objects, etc.", function()
         while game:GetService("RunService").RenderStepped:wait() do
             game.Players.LocalPlayer.Character.Head.CanCollide = false
-            if game.Players.LocalPlayer.Character.Head.CanCollide == true then
-            game.Players.LocalPlayer.Character.Head.CanCollide = false
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CamCollide = false
-            if game.Players.LocalPlayer.Character.HumanoidRootPart.CamCollide == true then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CamCollide = false
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
             game.Players.LocalPlayer.Character.Torso.CanCollide = false
-            if game.Players.LocalPlayer.Character.Torso == true then
-            game.Players.LocalPlayer.Character.Torso.CanCollide = false
-                end
-            end
-        end
     end
 end)
 
@@ -205,11 +196,6 @@ end)
 -- Infinite Yeild
 Section:NewButton("Inject Infinite Yeild", "You inject Infinite Yeild.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Infinite-yeild/main/Infiniteyeild.lua", true))()
-end)
-
--- CMD-X
-Section:NewButton("Inject CMD-X", "You inject CMD-X.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/CMD-X/main/CMD-X.lua", true))()
 end)
 
 -- Your script
