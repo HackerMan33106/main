@@ -7,7 +7,7 @@ local Section = Tab:NewSection("Teleport")
 
 -- Teleport to bosses
 Section:NewDropdown("Teleport to bosses", "You teleport to the bosses.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "just a cosmic garou"}, function(teleport)
-    if teleport == "DIO" then
+if teleport == "DIO" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies.DIO.HumanoidRootPart.CFrame
 elseif teleport == "Silver Chariot Requiem" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Silver Chariot Requiem"].HumanoidRootPart.CFrame
@@ -28,7 +28,7 @@ end)
 
 -- Teleport to NPC
 Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Yukari Yakumo"}, function(npc)
-    if npc == "Shop" then
+if npc == "Shop" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Shop.HumanoidRootPart.CFrame
 elseif npc == "Seller" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Seller.HumanoidRootPart.CFrame
@@ -47,7 +47,7 @@ end)
 
 -- Teleport to dummy
 Section:NewDropdown("Teleport to dummy", "You teleport to dummy.", {"250 Health Dummy", "Dummy", "Blocking dummy", "Attacking dummy"}, function(dummy)
-    if dummy == "250 Health Dummy" then
+if dummy == "250 Health Dummy" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["250 Health : S:Diavolo Dummy"].HumanoidRootPart.CFrame
 elseif dummy == "Dummy" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["S:Diavolo Dummy"].HumanoidRootPart.CFrame
@@ -109,7 +109,7 @@ end)
 
 -- Instant kill bosses
 Section:NewDropdown("Instant kill bosses", "You instantly kill bosses.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "just a cosmic garou"}, function(kill)
-    if kill == "DIO" then
+if kill == "DIO" then
         game:GetService("Workspace").Enemies.DIO.Humanoid.RigType = 1
         wait(1)
         game:GetService("Workspace").Enemies.DIO.Humanoid.RigType = 0
@@ -150,7 +150,7 @@ local Section = Tab:NewSection("Teleport")
 
 -- Teleport to box
 Section:NewDropdown("Teleport to Box", "You teleport to the box.", {"Box 1", "Box 2", "Box 3", "Box 4", "Box 5"}, function(box)
-    if box == "Box 1" then
+if box == "Box 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(701.850891, 1599.30188, -386.067169, 1, 0, 0, 0, -1, 0, 0, 0, -1)
 elseif box == "Box 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(217.80011, 1673.31958, -892.313843, 1, 0, 0, 0, -1, 0, 0, 0, -1)
@@ -165,7 +165,7 @@ end)
 
 -- Teleport to dualknife
 Section:NewDropdown("Teleport to Dualknife", "You teleport to dualknife", {"Dualknife 1", "Dualknife 2", "Dualknife 3", "Dualknife 4", "Dualknife 5", "Dualknife 6"}, function(dualknife)
-    if dualknife == "Dualknife 1" then
+if dualknife == "Dualknife 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16.04953, 1597.9751, -103.170341, 0, 0, -1, -1, 0, 0, 0, 1, 0)
 elseif dualknife == "Dualknife 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-32.1399307, 1598.19727, -377.57843, 0, 0, -1, -1, 0, 0, 0, 1, 0)
@@ -182,7 +182,7 @@ end)
 
 -- Teleport to green baby
 Section:NewDropdown("Teleport to green baby", "You teleport to green baby.", {"Green baby 1", "Green baby 2", "Green baby 3"}, function(gb)
-    if gb == "Green baby 1" then
+if gb == "Green baby 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(722.09491, 1598.3999, -305.857971, 0, 1, 0, 0, 0, -1, -1, 0, 0)
 elseif gb == "Green baby 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(628.981262, 1598.39026, -379.190613, -0.15102005, 0.988530755, 4.24385071e-05, 4.24385071e-05, 4.94122505e-05, -1, -0.988530755, -0.15101999, -4.94718552e-05)
@@ -311,17 +311,29 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 7 Section Any scripts
--- Any scripts
-local Tab = Window:NewTab("Any scripts")
+--- 7 Section Other scripts
+-- Other scripts
+local Tab = Window:NewTab("Other scripts")
 local Section = Tab:NewSection("Scripts")
 
+-- DarkDex V4
 Section:NewButton("Inject DarkDex V4", "You inject DarkDex V4.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
 end)
 
+-- Infinite Yeild
 Section:NewButton("Inject Infinite Yeild", "You inject Infinite Yeild.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Infinite-yeild/main/Infiniteyeild.lua", true))()
+end)
+
+-- CMD-X
+Section:NewButton("Inject CMD-X", "You inject CMD-X.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/CMD-X/main/CMD-X.lua", true))()
+end)
+
+-- Your script
+Section:NewTextBox("Your script", "Paste the link to your script here.", function(uscript)
+	loadstring(game:HttpGet(uscript, true))()
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
