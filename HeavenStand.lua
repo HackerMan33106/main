@@ -246,17 +246,8 @@ end)
 Section:NewButton("Noclip on", "You can walk through walls, objects, etc.", function()
         while game:GetService("RunService").RenderStepped:wait() do
             game.Players.LocalPlayer.Character.Head.CanCollide = false
-            if game.Players.LocalPlayer.Character.Head.CanCollide == true then
-            game.Players.LocalPlayer.Character.Head.CanCollide = false
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CamCollide = false
-            if game.Players.LocalPlayer.Character.HumanoidRootPart.CamCollide == true then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CamCollide = false
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
             game.Players.LocalPlayer.Character.Torso.CanCollide = false
-            if game.Players.LocalPlayer.Character.Torso == true then
-            game.Players.LocalPlayer.Character.Torso.CanCollide = false
-                end
-            end
-        end
     end
 end)
 
