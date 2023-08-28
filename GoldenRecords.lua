@@ -7,7 +7,7 @@ local Section = Tab:NewSection("Teleport")
 
 -- Teleport to locations
 Section:NewDropdown("Teleport to locations", "You teleport to a location.", {"Stardust Desert", "Eldritch Graveyard", "Woodlands", "Joe's Bar", "Police Station", "Kaz-Mart", "Blissful Respite", "Valley Of The Damned", "The Oasis", "DIOs Mansion", "Cottage", "Lower Kharvid", "Golden State Prison", "Kharvid", "The Highlands", "Peak Of The New Moon", "Forbidden Peak"}, function(lt)
-    if lt == "Stardust Desert" then
+if lt == "Stardust Desert" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1239.9989, 835.596619, -1623.56592, -0.680912614, -4.23435935e-08, -0.732364655, 2.55698769e-08, 1, -8.15911108e-08, 0.732364655, -7.42828874e-08, -0.680912614)
 elseif lt == "Eldritch Graveyard" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(715.283936, 772.66095, -1786.20032, -0.932443917, -1.12905916e-08, -0.361314774, 1.88276577e-08, 1, -7.98371076e-08, 0.361314774, -8.12463412e-08, -0.932443917)
@@ -46,7 +46,7 @@ end)
 
 -- Teleport to NPC
 Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Dio Brando", "Officer John", "Skill Purger", "Boss", "Speciality Reroller", "Barista", "Garbageman", "Hobo", "Priest", "Enrico Pucci", "Merchant", "Alchemist", "Vinny", "Archvox", "Prime Fridia", "Fisherman"}, function(npc)
-    if npc == "Dio Brando" then
+if npc == "Dio Brando" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPCs["Dio Brando"].HumanoidRootPart.CFrame
 elseif npc == "Officer John" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPCs["Officer John"].HumanoidRootPart.CFrame
@@ -83,7 +83,7 @@ end)
 
 -- Teleport to rokakaka trees
 Section:NewDropdown("Teleport to rokakaka trees", "You teleport to the rokkakaka trees.", {"Tree 1", "Tree 2", "Tree 3", "Tree 4", "Tree 5", "Tree 6"}, function(rt)
-    if rt == "Tree 1" then
+if rt == "Tree 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1144.59851, 765.504211, -687.196716, -0.870877743, -1.21682469e-08, -0.491499722, 6.10492457e-09, 1, -3.55745655e-08, 0.491499722, -3.39816673e-08, -0.870877743)
 elseif rt == "Tree 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1126.14307, 769.019104, -652.394226, -0.569854438, 5.42213243e-08, -0.821745694, 4.30509708e-08, 1, 3.61286219e-08, 0.821745694, -1.47888937e-08, -0.569854438)
@@ -100,7 +100,7 @@ end)
 
 -- Teleport to trash
 Section:NewDropdown("Teleport to trash", "You teleport to the trash.", {"Trash 1", "Trash 2", "Trash 3", "Trash 4", "Trash 5", "Trash 6", "Trash 7", "Trash 8", "Trash 9", "Trash 10"}, function(trash)
-    if trash == "Trash 1" then
+if trash == "Trash 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1193.05176, 771.358521, -2026.44385, -0.601351619, 0, 0.798984647, 0, 1, 0, -0.798984647, 0, -0.601351619)
 elseif trash == "Trash 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1561.79712, 752.455383, -1639.07764, -0.790538669, 0, -0.612412214, 0, 1, 0, 0.612412214, 0, -0.790538669)
@@ -125,7 +125,7 @@ end)
 
 -- Teleport to meteorite
 Section:NewDropdown("Teleport to meteorite", "You teleport to the meteorite.", {"Meteorite 1", "Meteorite 2", "Meteorite 3", "Meteorite 4", "Meteorite 5"}, function(mt)
-    if mt == "Meteorite 1" then
+if mt == "Meteorite 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-923.728027, 770, -1589.0155, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 elseif mt == "Meteorite 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1101.24451, 790, -2031.63721, 1, 0, 0, 0, 1, 0, 0, 0, 1)
@@ -140,7 +140,7 @@ end)
 
 -- Teleport to blight geode
 Section:NewDropdown("Teleport to blight geode", "You teleport to the blight geode.", {"Blight geode 1", "Blight geode 2", "Blight geode 3", "Blight geode 4", "Blight geode 5", "Blight geode 6"}, function(bg)
-    if bg == "Blight geode 1" then
+if bg == "Blight geode 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1439.32947, 837, -882.814514, 0.41675356, -0.000575092039, -0.909019351, 0.00141216966, 0.999998987, 1.47799701e-05, 0.909018397, -0.00128984905, 0.416753978)
 elseif bg == "Blight geode 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1807.35632, 914, -729.803772, -0.992264271, 8.93411998e-05, 0.124143414, 1.29116597e-05, 0.999999821, -0.0006164597, -0.124143444, -0.000610087998, -0.992264092)
@@ -160,13 +160,15 @@ Section:NewTextBox("Teleport to players", "Enter a nickname for the person you w
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")[ply].HumanoidRootPart.CFrame
 end)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 --- 2 Bosses, Enemies and Dummy
 local Tab = Window:NewTab("Bosses and Enemies")
 local Section = Tab:NewSection("Bosses and Enemies")
 
 -- Teleport to Dummy
 Section:NewDropdown("Teleport to dummy", "You teleport to dummy.", {"Dummy 1", "Dummy 2", "Dummy 3", "Dummy 4"}, function(dummy)
-    if dummy == "Dummy 1" then
+if dummy == "Dummy 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Dummy 1"].HumanoidRootPart.CFrame
 elseif dummy == "Dummy 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Dummy 2"].HumanoidRootPart.CFrame
@@ -179,7 +181,7 @@ end)
 
 -- Teleport to golems spawn
 Section:NewDropdown("Teleport to golems spawn", "You teleport to golems spawn.", {"Golem spawn 1", "Golem spawn 2", "Golem spawn 3"}, function(gs)
-    if gs == "Golem spawn 1" then
+if gs == "Golem spawn 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2785.72046, 985.514282, -1257.67944, 0.93574053, -0, -0.352689117, 0, 1, -0, 0.352689117, 0, 0.93574053)
 elseif gs == "Golem spawn 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2422.44556, 982.764282, -1404.69751, 0.93574053, -0, -0.352689117, 0, 1, -0, 0.352689117, 0, 0.93574053)
@@ -188,13 +190,15 @@ elseif gs == "Golem spawn 3" then
     end
 end)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 --- 3 Teleport to items and etc.
 local Tab = Window:NewTab("Items and etc.")
 local Section = Tab:NewSection("Items and etc.")
 
 -- Sand pile
 Section:NewDropdown("Teleport to sand pile", "You teleport to a pile of sand.", {"Sand pile 1", "Sand pile 2", "Sand pile 3", "Sand pile 4"}, function(sp)
-    if sp == "Sand pile 1" then
+if sp == "Sand pile 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2396.06396, 882.5, -2112.48145, 0.999994814, -0.00149020599, -0.00285724876, 0.00147085183, 0.999976039, -0.00676388619, 0.00286725978, 0.00675964821, 0.999973059)
 elseif sp == "Sand pile 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2759.68213, 882.5, -2275.11035, -0.731966197, -0.00173868833, -0.681338727, 0.000427788997, 0.999995351, -0.00301143527, 0.681340814, -0.00249573798, -0.731962085)
@@ -204,6 +208,8 @@ elseif sp == "Sand pile 4" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2170.56641, 948.5, -2047.85132, 0.0760170817, -0, -0.997106493, 0, 1, -0, 0.997106493, 0, 0.0760170817)
     end
 end)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 --- 4 Section Misc
 local Tab = Window:NewTab("Misc")
@@ -235,20 +241,45 @@ Section:NewButton("Kill yourself", "You are dying.", function()
 end)
 
 -- Noclip
-local LowerTorso = game.Players.LocalPlayer.Character.LowerTorso
-local UpperTorso = game.Players.LocalPlayer.Character.UpperTorso
-local HRP = game.Players.LocalPlayer.Character.HumanoidRootPart
-
 Section:NewButton("Noclip on", "You can walk through walls, objects, etc.", function()
-    LowerTorso.CanCollide = false
-    UpperTorso.CanCollide = false
-    HRP.CanCollide = false
+        while game:GetService("RunService").RenderStepped:wait() do
+            game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+            if game.Players.LocalPlayer.Character.LowerTorso.CanCollide == true then
+            game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+            game.Players.LocalPlayer.Character.UpperTorso.CamCollide = false
+            if game.Players.LocalPlayer.Character.UpperTorso.CamCollide == true then
+            game.Players.LocalPlayer.Character.UpperTorso.CamCollide = false
+            end
+        end
+    end
 end)
 
-Section:NewButton("Noclip off", "You stop walking through walls, objects, etc.", function()
-    LowerTorso.CanCollide = true
-    UpperTorso.CanCollide = true
-    HRP.CanCollide = true
+-- ESP
+Section:NewButton("ESP", "You can see the players through the wall.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/ESP/main/ESP.lua", true))()
+end)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--- 5 Section Fun
+local Tab = Window:NewTab("Fun")
+local Section = Tab:NewSection("Fun")
+
+-- Undressing the players
+Section:NewTextBox("Undressing the plr", "Enter nickname to undress(wrong nickname = no undressing).", function(utp)
+    game:GetService("Workspace")[utp].Shirt:Destroy()
+	game:GetService("Workspace")[utp].Pants:Destroy()
+    game:GetService("Workspace")[utp]["Shirt Graphic"]:Destroy()
+end)
+
+-- Field Of Viev
+Section:NewSlider("Field Of Viev", "You can control your field of viev.", 120, 1, function(fov)
+    game:GetService("Workspace").Camera.FieldOfView = fov
+end)
+
+-- Default field of viev
+Section:NewButton("Default field of viev", "You set Default field of view.", function()
+    game:GetService("Workspace").Camera.FieldOfView = 70
 end)
 
 -- Sit
@@ -256,11 +287,41 @@ Section:NewKeybind("Sit", "You sit down.", Enum.KeyCode.X, function()
 	game.Players.LocalPlayer.Character.Humanoid.Sit = true 
 end)
 
---- 4 Section Credit
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- 6 Section Other scripts
+-- Other scripts
+local Tab = Window:NewTab("Other scripts")
+local Section = Tab:NewSection("Scripts")
+
+-- DarkDex V4
+Section:NewButton("Inject DarkDex V4", "You inject DarkDex V4.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+end)
+
+-- Infinite Yeild
+Section:NewButton("Inject Infinite Yeild", "You inject Infinite Yeild.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Infinite-yeild/main/Infiniteyeild.lua", true))()
+end)
+
+-- CMD-X
+Section:NewButton("Inject CMD-X", "You inject CMD-X.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/CMD-X/main/CMD-X.lua", true))()
+end)
+
+-- Your script
+Section:NewTextBox("Your script", "Paste the link to your script here.", function(uscript)
+	loadstring(game:HttpGet(uscript, true))()
+end)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--- 7 Section Credit
 -- Credit
 local Tab = Window:NewTab("Credit")
-local Section = Tab:NewSection("By HackerMan")
+local Section = Tab:NewSection("By HackerMan33105")
 
+Section:NewLabel("Helped with script ChatGPT")
 Section:NewLabel("Made according to the Robojini guide")
 Section:NewButton("His discord", "Click to copy the link.", function()
     setclipboard("https://discord.gg/E4BdnAXsuE")
