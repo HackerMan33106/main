@@ -27,7 +27,7 @@ elseif teleport == "just a cosmic garou" then
 end)
 
 -- Teleport to NPC
-Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Yukari Yakumo"}, function(npc)
+Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Yukari Yakumo", "Toji"}, function(npc)
 if npc == "Shop" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Shop.HumanoidRootPart.CFrame
 elseif npc == "Seller" then
@@ -41,7 +41,9 @@ elseif npc == "Boxing Master" then
 elseif npc == "Gojo" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Gojo.HumanoidRootPart.CFrame
 elseif npc == "Yukari Yakumo" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC["Yukari Yakumo"].HumanoidRootPart
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC["Yukari Yakumo"].HumanoidRootPart.CFrame
+elseif npc == "Toji" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Toji.HumanoidRootPart.CFrame
     end
 end)
 
@@ -144,6 +146,8 @@ elseif kill == "just a cosmic garou" then
     end
 end)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 --- 3 Section Teleport to Items
 local Tab = Window:NewTab("Teleporting to items")
 local Section = Tab:NewSection("Teleport")
@@ -151,13 +155,13 @@ local Section = Tab:NewSection("Teleport")
 -- Teleport to box
 Section:NewDropdown("Teleport to Box", "You teleport to the box.", {"Box 1", "Box 2", "Box 3", "Box 4", "Box 5"}, function(box)
 if box == "Box 1" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(701.850891, 1599.30188, -386.067169, 1, 0, 0, 0, -1, 0, 0, 0, -1)
-elseif box == "Box 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(217.80011, 1673.31958, -892.313843, 1, 0, 0, 0, -1, 0, 0, 0, -1)
-elseif box == "Box 3" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(456.85672, 1599.09717, -281.288269, 1, 0, 0, 0, -1, 0, 0, 0, -1)
-elseif box == "Box 4" then
+elseif box == "Box 2" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(632.252747, 1599.09717, -196.558029, 1, 0, 0, 0, -1, 0, 0, 0, -1)
+elseif box == "Box 3" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(701.850891, 1599.30188, -386.067169, 1, 0, 0, 0, -1, 0, 0, 0, -1)
+elseif box == "Box 4" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(456.85672, 1599.09717, -281.288269, 1, 0, 0, 0, -1, 0, 0, 0, -1)
 elseif box == "Box 5" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(391.982361, 1599.30188, -499.327942, 1, 0, 0, 0, -1, 0, 0, 0, -1)
     end
