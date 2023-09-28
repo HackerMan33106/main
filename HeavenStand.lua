@@ -27,7 +27,7 @@ elseif teleport == "just a cosmic garou" then
 end)
 
 -- Teleport to NPC
-Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Yukari Yakumo", "Toji"}, function(npc)
+Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Yukari Yakumo", "Toji", "Yuta"}, function(npc)
 if npc == "Shop" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Shop.HumanoidRootPart.CFrame
 elseif npc == "Seller" then
@@ -44,6 +44,8 @@ elseif npc == "Yukari Yakumo" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC["Yukari Yakumo"].HumanoidRootPart.CFrame
 elseif npc == "Toji" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Toji.HumanoidRootPart.CFrame
+elseif npc == "Yuta" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Yuta.HumanoidRootPart.CFrame
     end
 end)
 
@@ -244,6 +246,8 @@ end)
 -- Suicide
 Section:NewButton("Kill yourself", "You are dying.", function()
     game.Players.LocalPlayer.Character.Humanoid.RigType = 1
+    wait(1)
+    game.Players.LocalPlayer.Character.Humanoid.RigType = 0
 end)
 
 -- Noclip
@@ -303,10 +307,26 @@ end)
 Section:NewKeybind("Sit", "You sit down.", Enum.KeyCode.V, function()
 	game.Players.LocalPlayer.Character.Humanoid.Sit = true 
 end)
-
+--[[
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 7 Section Other scripts
+--- 7 Section player check
+-- Player check
+local Tab = Window:NewTab("Players")
+local Section = Tab:NewSection("Players")
+
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+
+-- Player check
+Section:NewTextBox("Check player", "Input the nickname for check (wrong nickname, no check).", function(check)
+    print(check)
+    Section:NewLabel("Player Stand: " PStand ".")
+end)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+]]
+--- 8 Section Other scripts
 -- Other scripts
 local Tab = Window:NewTab("Other scripts")
 local Section = Tab:NewSection("Scripts")
@@ -333,7 +353,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 8 Section Credit
+--- 9 Section Credit
 -- Credit
 local Tab = Window:NewTab("Credit")
 local Section = Tab:NewSection("By HackerMan33105")
