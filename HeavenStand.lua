@@ -27,7 +27,7 @@ elseif teleport == "just a cosmic garou" then
 end)
 
 -- Teleport to NPC
-Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Yukari Yakumo", "Toji", "Yuta"}, function(npc)
+Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Yukari Yakumo", "Toji", "Yuta", "Marisa"}, function(npc)
 if npc == "Shop" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Shop.HumanoidRootPart.CFrame
 elseif npc == "Seller" then
@@ -46,6 +46,8 @@ elseif npc == "Toji" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Toji.HumanoidRootPart.CFrame
 elseif npc == "Yuta" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Yuta.HumanoidRootPart.CFrame
+elseif npc == "Marisa" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Marisa.HumanoidRootPart.CFrame
     end
 end)
 
@@ -155,45 +157,47 @@ local Tab = Window:NewTab("Teleporting to items")
 local Section = Tab:NewSection("Teleport")
 
 -- Teleport to box
-Section:NewDropdown("Teleport to Box", "You teleport to the box.", {"Box 1", "Box 2", "Box 3", "Box 4", "Box 5"}, function(box)
+Section:NewDropdown("Teleport to Box", "You teleport to the box.", {"Box 1", "Box 2", "Box 3", "Box 4", "Box 5", "Box 6"}, function(box)
 if box == "Box 1" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(217.80011, 1673.31958, -892.313843, 1, 0, 0, 0, -1, 0, 0, 0, -1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(88.6195755, 2.29400635, 272.246124, 1, 0, 0, 0, -1, 0, 0, 0, -1)
 elseif box == "Box 2" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(632.252747, 1599.09717, -196.558029, 1, 0, 0, 0, -1, 0, 0, 0, -1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-76.5198746, 2.29400635, 211.432983, 1, 0, 0, 0, -1, 0, 0, 0, -1)
 elseif box == "Box 3" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(701.850891, 1599.30188, -386.067169, 1, 0, 0, 0, -1, 0, 0, 0, -1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-119.116692, 2.29400635, -11.8983154, 1, 0, 0, 0, -1, 0, 0, 0, -1)
 elseif box == "Box 4" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(456.85672, 1599.09717, -281.288269, 1, 0, 0, 0, -1, 0, 0, 0, -1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-76.1594696, 2.29400635, -150.602936, 1, 0, 0, 0, -1, 0, 0, 0, -1)
 elseif box == "Box 5" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(391.982361, 1599.30188, -499.327942, 1, 0, 0, 0, -1, 0, 0, 0, -1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-281.939026, 2.29400635, -6.23294067, 1, 0, 0, 0, -1, 0, 0, 0, -1)
+elseif box == "Box 6" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-404.760468, 2.29400635, 133.927063, 1, 0, 0, 0, -1, 0, 0, 0, -1)
     end
 end)
 
 -- Teleport to dualknife
 Section:NewDropdown("Teleport to Dualknife", "You teleport to dualknife", {"Dualknife 1", "Dualknife 2", "Dualknife 3", "Dualknife 4", "Dualknife 5", "Dualknife 6"}, function(dualknife)
 if dualknife == "Dualknife 1" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16.04953, 1597.9751, -103.170341, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-348.159332, 0.967250109, -0.619232178, 0, 0, -1, -1, 0, 0, 0, 1, 0)
 elseif dualknife == "Dualknife 2" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-32.1399307, 1598.19727, -377.57843, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-204.379089, 1.24286401, -96.7065887, 0, 0, -1, -1, 0, 0, 0, 1, 0)
 elseif dualknife == "Dualknife 3" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(291.438049, 1597.9751, -500.350464, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-76.1492462, 0.967250109, -49.3597107, 0, 0, -1, -1, 0, 0, 0, 1, 0)
 elseif dualknife == "Dualknife 4" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(438.514832, 1597.77039, -370.383759, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-117.80365, 0.967250109, -205.215302, 0, 0, -1, -1, 0, 0, 0, 1, 0)
 elseif dualknife == "Dualknife 5" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(88.2018356, 1597.77039, -569.645508, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56.9712219, 0.967250109, -328.415527, 0, 0, -1, -1, 0, 0, 0, 1, 0)
 elseif dualknife == "Dualknife 6" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(173.073059, 1597.77063, 41.3297195, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(90.19207, 0.967250109, -243.308884, 0, 0, -1, -1, 0, 0, 0, 1, 0)
     end
 end)
 
 -- Teleport to green baby
 Section:NewDropdown("Teleport to green baby", "You teleport to green baby.", {"Green baby 1", "Green baby 2", "Green baby 3"}, function(gb)
 if gb == "Green baby 1" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(722.09491, 1598.3999, -305.857971, 0, 1, 0, 0, 0, -1, -1, 0, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(90.19207, 0.967250109, -243.308884, 0, 0, -1, -1, 0, 0, 0, 1, 0)
 elseif gb == "Green baby 2" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(628.981262, 1598.39026, -379.190613, -0.15102005, 0.988530755, 4.24385071e-05, 4.24385071e-05, 4.94122505e-05, -1, -0.988530755, -0.15101999, -4.94718552e-05)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-134.000931, 1.44551516, -191.255386, 0, 1, 0, 0, 0, -1, -1, 0, 0)
 elseif gb == "Green baby 3" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(365.458984, 1598.81506, -231.175369, -0.15102005, 0.988530755, 4.24385071e-05, 4.24385071e-05, 4.94122505e-05, -1, -0.988530755, -0.15101999, -4.94718552e-05)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-232.313889, 1.44551516, -4.18959045, 0, 1, 0, 0, 0, -1, -1, 0, 0)
     end
 end)
 
@@ -352,8 +356,24 @@ Section:NewTextBox("Your script", "Paste the link to your script here.", functio
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[[
+--- 9 Section Developer GUI
+local Tab = Window:NewTab("Developer")
+local Section = Tab:NewSection("Developer GUI")
 
---- 9 Section Credit
+local password = "04102009"
+
+Section:NewTextBox("Developer GUI", "Test", function(passcheck)
+	if passcheck == password then
+            loadstring(game:HttpGet(""))()
+    elseif passcheck ~= password then
+            print("Nice try bruh")
+    end
+end)
+]]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--- 10 Section Credit
 -- Credit
 local Tab = Window:NewTab("Credit")
 local Section = Tab:NewSection("By HackerMan33105")
