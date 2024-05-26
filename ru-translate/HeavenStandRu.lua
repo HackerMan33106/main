@@ -29,7 +29,7 @@ elseif teleport == "just a cosmic garou" then
 end)
 
 -- Teleport to NPC
-Section:NewDropdown("Телепортация к НПС", "Вы телепортируетесь к НПС.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Yukari Yakumo", "Toji", "Yuta"}, function(npc)
+Section:NewDropdown("Телепортация к НПС", "Вы телепортируетесь к НПС.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Toji", "Yuta"}, function(npc)
 if npc == "Shop" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Shop.HumanoidRootPart.CFrame
 elseif npc == "Seller" then
@@ -42,8 +42,6 @@ elseif npc == "Boxing Master" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC["Boxing Master"].HumanoidRootPart.CFrame
 elseif npc == "Gojo" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Gojo.HumanoidRootPart.CFrame
-elseif npc == "Yukari Yakumo" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC["Yukari Yakumo"].HumanoidRootPart.CFrame
 elseif npc == "Toji" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Toji.HumanoidRootPart.CFrame
 elseif npc == "Yuta" then
@@ -163,8 +161,10 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 --- 3 Section Teleport to Items
-local Tab = Window:NewTab("Телепортация к предметам")
+local Tab = Window:NewTab("Тп к предметам")
 local Section = Tab:NewSection("Телепорт")
+
+Section:NewLabel("Совет: Прыгайте перед телепортом.")
 
 -- Teleport to box
 Section:NewDropdown("Телепортация к ящикам", "Вы телепортируетесь к ящику.", {"Ящик 1", "Ящик 2", "Ящик 3", "Ящик 4", "Ящик 5", "Ящик 6"}, function(box)
@@ -212,19 +212,19 @@ elseif gb == "Зелённый ребёнок 3" then
 end)
 
 -- Teleport to mini hakkero
-Section:NewDropdown("Телепортация к мини Хаккеро", "Вы телепортируетесь к мини Хаккеро.", {"Мини Хаккеро 1", "Мини Хаккеро 2", "Мини Хаккеро 3", "Мини Хаккеро 4", "Мини Хаккеро 5"}, function(gb)
-    if hm == "Мини Хаккеро 1" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.5779266, 1.27398145, 90.3544998, -1, 0, -0, 0, 0, -1, 0, -1, -0)
-    elseif hm == "Мини Хаккеро 2" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-523.490234, 1.27398145, -277.166809, -1, 0, -0, 0, 0, -1, 0, -1, -0)
-    elseif hm == "Мини Хаккеро 3" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-225.36087, 1.52194595, -24.3506012, -1, 0, -0, 0, 0, -1, 0, -1, -0)
-    elseif hm == "Мини Хаккеро 4" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-580.705933, 1.27398145, -204.590973, -1, 0, -0, 0, 0, -1, 0, -1, -0)
-    elseif hm == "Мини Хаккеро 5" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-52.7155457, 1.52194595, -88.0363083, -1, 0, -0, 0, 0, -1, 0, -1, -0)
-        end
-    end)
+Section:NewDropdown("Телепортация к мини Хаккеро", "Вы телепортируетесь к мини Хаккеро.", {"Мини Хаккеро 1", "Мини Хаккеро 2", "Мини Хаккеро 3", "Мини Хаккеро 4", "Мини Хаккеро 5"}, function(mh)
+if mh == "Мини Хаккеро 1" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.5779266, 1.27398145, 90.3544998, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+elseif mh == "Мини Хаккеро 2" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-523.490234, 1.27398145, -277.166809, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+elseif mh == "Мини Хаккеро 3" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-225.36087, 1.52194595, -24.3506012, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+elseif mh == "Мини Хаккеро 4" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-580.705933, 1.27398145, -204.590973, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+elseif mh == "Мини Хаккеро 5" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-52.7155457, 1.52194595, -88.0363083, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+    end
+end)
 
 -- Teleport to xsoul
 Section:NewButton("Телепортация к XSoul", "Вы телепортируетесь к XSoul.", function()
@@ -375,8 +375,8 @@ Section:NewTextBox("Инфо про игрока", "Введите ник для
         vs.Name = "NameValue"
         vs.Value = pi
         vs.Parent = workspace
-    wait(1.5)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/main/PInfo.lua", true))()
+    wait(0.5)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/main/ru-translate/PlayerInfoRu.lua", true))()
 end)
 
 -- Sit
@@ -398,7 +398,7 @@ if dex == "DarkDex V4" then
 elseif dex == "DarkDex V3" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V3", true))()
 elseif dex == "DarkDex V1.1.0 Alpha" then
-    loadstring(game:HttpGet("https://github.com/HackerMan33106/DarkDex/raw/main/DarkDex-V1.1.0%20Alpha", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V1.1.0%20Alpha", true))()
     end
 end)
 
@@ -418,25 +418,8 @@ Section:NewTextBox("Твой скрипт", "Введите ссылку сво�
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---[[
---- 8 Section Developer GUI
-local Tab = Window:NewTab("Создатель")
-local Section = Tab:NewSection("GUI создателя")
 
-local password = "04102009"
-
-Section:NewTextBox("GUI создателя", "Test", function(passcheck)
-	if passcheck == password then
-            loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/main/DeveloperGUI.lua"))()"))()
-            
-    elseif passcheck ~= password then
-            print("Nice try bruh")
-    end
-end)
-]]
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---- 9 Section Credit
+--- 8 Section Credit
 -- Credit
 local Tab = Window:NewTab("Благодарности")
 local Section = Tab:NewSection("Создал HackerMan33105")
@@ -445,6 +428,9 @@ Section:NewLabel("Помогал с идеями ---> rusterd")
 Section:NewLabel("Сделал гайд по GUI ---> Robojini")
 Section:NewButton("Вот дискорд Robojini", "Нажми сюда для копирывания ссылки.", function()
     setclipboard("https://discord.gg/E4BdnAXsuE")
+end)
+Section:NewButton("Вот ютуб канал Robojini", "Нажми сюда для копирывания ссылки.", function()
+    setclipboard("https://www.youtube.com/@Robojini")
 end)
 
 local ws = game:GetService("Workspace")
