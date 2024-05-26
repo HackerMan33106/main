@@ -6,7 +6,7 @@ local Tab = Window:NewTab("Teleporting")
 local Section = Tab:NewSection("Teleport")
 
 -- Teleport to bosses
-Section:NewDropdown("Teleport to bosses", "You teleport to the bosses.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "just a cosmic garou"}, function(teleport)
+Section:NewDropdown("Teleport to bosses", "You teleport to the bosses.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "Sisyphus Prime", "just a cosmic garou"}, function(teleport)
 if teleport == "DIO" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies.DIO.HumanoidRootPart.CFrame
 elseif teleport == "Silver Chariot Requiem" then
@@ -21,13 +21,15 @@ elseif teleport == "Minos Prime" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Minos Prime"].HumanoidRootPart.CFrame
 elseif teleport == "Sakuya Izayoi" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Sakuya Izayoi"].HumanoidRootPart.CFrame
+elseif teleport == "Sisyphus Prime" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Sisyphus Prime"].HumanoidRootPart.CFrame
 elseif teleport == "just a cosmic garou" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["just a cosmic garou"].HumanoidRootPart.CFrame
     end
 end)
 
 -- Teleport to NPC
-Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Yukari Yakumo", "Toji", "Yuta", "Marisa"}, function(npc)
+Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Toji", "Yuta"}, function(npc)
 if npc == "Shop" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Shop.HumanoidRootPart.CFrame
 elseif npc == "Seller" then
@@ -40,27 +42,25 @@ elseif npc == "Boxing Master" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC["Boxing Master"].HumanoidRootPart.CFrame
 elseif npc == "Gojo" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Gojo.HumanoidRootPart.CFrame
-elseif npc == "Yukari Yakumo" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC["Yukari Yakumo"].HumanoidRootPart.CFrame
 elseif npc == "Toji" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Toji.HumanoidRootPart.CFrame
 elseif npc == "Yuta" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Yuta.HumanoidRootPart.CFrame
-elseif npc == "Marisa" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Marisa.HumanoidRootPart.CFrame
     end
 end)
 
 -- Teleport to dummy
-Section:NewDropdown("Teleport to dummy", "You teleport to dummy.", {"250 Health Dummy", "Dummy", "Blocking dummy", "Attacking dummy"}, function(dummy)
-if dummy == "250 Health Dummy" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["250 Health : S:Diavolo Dummy"].HumanoidRootPart.CFrame
-elseif dummy == "Dummy" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["S:Diavolo Dummy"].HumanoidRootPart.CFrame
+Section:NewDropdown("Teleport to dummy", "You teleport to dummy.", {"Dummy", "300 Health Dummy", "Blocking dummy", "Attacking dummy", "Numbness dummy"}, function(dummy)
+if dummy == "Dummy" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["just a dummy"].HumanoidRootPart.CFrame
+elseif dummy == "300 Health Dummy" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["just a dummy but 300 hp"].HumanoidRootPart.CFrame
 elseif dummy == "Blocking dummy" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["S:Diavolo Blocking"].HumanoidRootPart.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["just a dummy but death effect"].HumanoidRootPart.CFrame
 elseif dummy == "Attacking dummy" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["S:Diavolo Attacking"].HumanoidRootPart.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["just a dummy but attack you"].HumanoidRootPart.CFrame
+elseif dummy == "Numbness dummy" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["just a dummy but infinity"].HumanoidRootPart.CFrame
     end
 end)
 
@@ -76,7 +76,7 @@ local Tab = Window:NewTab("Bosses")
 local Section = Tab:NewSection("Bosses management")
 
 -- Boss slowdown
-Section:NewDropdown("Boss slowdown", "You slow down bosses a lot.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "just a cosmic garou"}, function(slow)
+Section:NewDropdown("Boss slowdown", "You slow down bosses a lot.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "Sisyphus Prime", "just a cosmic garou"}, function(slow)
 
 if slow == "DIO" then
         while game:GetService("RunService").RenderStepped:wait() do
@@ -106,6 +106,10 @@ elseif slow == "Sakuya Izayoi" then
         while game:GetService("RunService").RenderStepped:wait() do
             game:GetService("Workspace").Enemies["Sakuya Izayoi"].Humanoid.WalkSpeed = 0
         end
+ elseif slow == "Sisyphus Prime" then
+        while game:GetService("RunService").RenderStepped:wait() do
+            game:GetService("Workspace").Enemies["Sisyphus Prime"].Humanoid.WalkSpeed = 0
+        end
 elseif slow == "just a cosmic garou" then
         while game:GetService("RunService").RenderStepped:wait() do
             game:GetService("Workspace").Enemies["just a cosmic garou"].Humanoid.WalkSpeed = 0
@@ -114,7 +118,7 @@ elseif slow == "just a cosmic garou" then
 end)
 
 -- Instant kill bosses
-Section:NewDropdown("Instant kill bosses", "You instantly kill bosses.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "just a cosmic garou"}, function(kill)
+Section:NewDropdown("Instant kill bosses", "You instantly kill bosses.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "Sisyphus Prime", "just a cosmic garou"}, function(kill)
 if kill == "DIO" then
         game:GetService("Workspace").Enemies.DIO.Humanoid.RigType = 1
         wait(1)
@@ -143,6 +147,10 @@ elseif kill == "Sakuya Izayoi" then
     game:GetService("Workspace").Enemies["Sakuya Izayoi"].Humanoid.RigType = 1
     wait(1)
     game:GetService("Workspace").Enemies["Sakuya Izayoi"].Humanoid.RigType = 0
+elseif kill == "Sisyphus Prime" then
+    game:GetService("Workspace").Enemies["Sisyphus Prime"].Humanoid.RigType = 1
+    wait(1)
+    game:GetService("Workspace").Enemies["Sisyphus Prime"].Humanoid.RigType = 0
 elseif kill == "just a cosmic garou" then
     game:GetService("Workspace").Enemies["just a cosmic garou"].Humanoid.RigType = 1
     wait(1)
@@ -155,6 +163,8 @@ end)
 --- 3 Section Teleport to Items
 local Tab = Window:NewTab("Teleporting to items")
 local Section = Tab:NewSection("Teleport")
+
+Section:NewLabel("Tip: Jump in front of the teleport.")
 
 -- Teleport to box
 Section:NewDropdown("Teleport to Box", "You teleport to the box.", {"Box 1", "Box 2", "Box 3", "Box 4", "Box 5", "Box 6"}, function(box)
@@ -201,6 +211,21 @@ elseif gb == "Green baby 3" then
     end
 end)
 
+-- Teleport to mini hakkero
+Section:NewDropdown("Teleport to mini Hakkero", "You teleport to mini Hakkero.", {"Mini Hakkero 1", "Mini Hakkero 2", "Mini Hakkero 3", "Mini Hakkero 4", "Mini Hakkero 5"}, function(mh)
+if mh == "Mini Hakkero 1" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.5779266, 1.27398145, 90.3544998, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+elseif mh == "Mini Hakkero 2" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-523.490234, 1.27398145, -277.166809, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+elseif mh == "Mini Hakkero 3" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-225.36087, 1.52194595, -24.3506012, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+elseif mh == "Mini Hakkero 4" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-580.705933, 1.27398145, -204.590973, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+elseif mh == "Mini Hakkero 5" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-52.7155457, 1.52194595, -88.0363083, -1, 0, -0, 0, 0, -1, 0, -1, -0)
+    end
+end)
+
 -- Teleport to xsoul
 Section:NewButton("Teleport to XSoul", "You teleport to XSoul.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Item_Spawnner"].XSoul.XSoul.CFrame
@@ -242,11 +267,6 @@ Section:NewSlider("Gravity", "You can control your gravity.", -1000, 196.2, func
     game:GetService("Workspace").Gravity = gravity
 end)
 
--- Uncombat
-Section:NewButton("Uncombat", "Turns off combat.", function()
-    game.Players.LocalPlayer.Character.Settings["In_Combat"].Value = false
-end)
-
 -- Suicide
 Section:NewButton("Kill yourself", "You are dying.", function()
     game.Players.LocalPlayer.Character.Humanoid.RigType = 1
@@ -254,13 +274,21 @@ Section:NewButton("Kill yourself", "You are dying.", function()
     game.Players.LocalPlayer.Character.Humanoid.RigType = 0
 end)
 
--- Noclip
-Section:NewButton("Noclip on", "You can walk through walls, objects, etc.", function()
-        while game:GetService("RunService").RenderStepped:wait() do
-            game.Players.LocalPlayer.Character.Head.CanCollide = false
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-            game.Players.LocalPlayer.Character.Torso.CanCollide = false
-    end
+-- Noclip on/off
+Section:NewButton("Noclip on", "You can go through walls and the rest of it.", function()
+    while game:GetService("RunService").RenderStepped:wait() do
+        game.Players.LocalPlayer.Character.Head.CanCollide = false
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+        game.Players.LocalPlayer.Character.Torso.CanCollide = false
+end
+end)
+
+Section:NewButton("Noclip off", "You can no longer pass through walls and the rest.", function()
+while game:GetService("RunService").RenderStepped:wait() do
+    game.Players.LocalPlayer.Character.Head.CanCollide = true
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = true
+    game.Players.LocalPlayer.Character.Torso.CanCollide = true
+end
 end)
 
 -- ESP
@@ -275,12 +303,44 @@ end)
 local Tab = Window:NewTab("Settings")
 local Section = Tab:NewSection("Settings")
 
--- Death GUI destroy
-Section:NewButton("Destroy death gui", "You destroy the death gui.", function()
-    game:GetService("Workspace")["Workspace Assets"]["Death Camera"]:Destroy()
-    game:GetService("StarterGui").Death:Destroy()
-    game.Players.LocalPlayer.PlayerGui.Death:Destroy()
-    game:GetService("ReplicatedStorage").Assets.GUI["Death Screen"]:Destroy()
+Section:NewButton("Turn off the rain", "You're turning off the rain for good.", function()
+    game:GetService("Workspace").Effects.Weather:Destroy()
+end)
+
+Section:NewButton("Turning off the blinking light", "You turn off the blinking lights permanently.", function()
+    game.Lighting.IMPACT1:Destroy()
+    game.Lighting.IMPACT2:Destroy()
+end)
+
+Section:NewButton("Cloud removal", "You are permanently removing clouds.", function()
+    game:GetService("Workspace").Terrain.Clouds:Destroy()
+end)
+
+Section:NewButton("Disabling screen shake", "You disable screen shake permanently.", function()
+    game.Players.LocalPlayer.Settings["Camera Shake"].Value = false
+    game.Players.LocalPlayer.Settings.CameraShake.Value = false
+end)
+
+Section:NewButton("Removing the pink effect", "You will remove the pink effect.", function()
+    game.Lighting.ColorCorrection:Destroy()
+end)
+
+Section:NewButton("The inclusion of horribly bad graphics", "You're turning on permanently bad graphics.", function()
+    game.Players.LocalPlayer.Settings["Camera Shake"].Value = false
+    game.Players.LocalPlayer.Settings.CameraShake.Value = false
+    game:GetService("Workspace").Effects:Destroy()
+    game:GetService("Workspace").Terrain.Clouds:Destroy()
+    game.Lighting.IMPACT1:Destroy()
+    game.Lighting.IMPACT2:Destroy()
+    game.Lighting.Atmosphere:Destroy()
+    game.Lighting.Sky:Destroy()
+    game.Lighting.GlobalShadows = false
+    game.Players.LocalPlayer.Settings["Low Graphics"].Value = true
+    game.Lighting.ColorCorrection:Destroy()
+end)
+
+Section:NewButton("Removing all effects", "You permanently remove all effects.", function()
+    game:GetService("Workspace").Effects:Destroy()
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -307,38 +367,40 @@ Section:NewButton("Default field of viev", "You set Default field of view.", fun
     game:GetService("Workspace").Camera.FieldOfView = 70
 end)
 
+-- Player Info
+Section:NewTextBox("Player Info", "Enter nickname for info(Incorrect nickname no info.).", function(pi)
+    game:GetService("Workspace").NameValue:Destroy()
+    local ws = game:GetService("Workspace")
+    local vs = Instance.new("StringValue")
+        vs.Name = "NameValue"
+        vs.Value = pi
+        vs.Parent = workspace
+    wait(0.5)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/main/PlayerInfo.lua", true))()
+end)
+
 -- Sit
 Section:NewKeybind("Sit", "You sit down.", Enum.KeyCode.V, function()
 	game.Players.LocalPlayer.Character.Humanoid.Sit = true 
 end)
---[[
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---- 7 Section player check
--- Player check
-local Tab = Window:NewTab("Players")
-local Section = Tab:NewSection("Players")
-
-local NotificationBindable = Instance.new("BindableFunction")
-NotificationBindable.OnInvoke = callback
-
--- Player check
-Section:NewTextBox("Check player", "Input the nickname for check (wrong nickname, no check).", function(check)
-    print(check)
-    Section:NewLabel("Player Stand: " PStand ".")
-end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-]]
---- 8 Section Other scripts
+
+--- 7 Section Other scripts
 -- Other scripts
 local Tab = Window:NewTab("Other scripts")
 local Section = Tab:NewSection("Scripts")
 
--- DarkDex V4
-Section:NewButton("Inject DarkDex V4", "You inject DarkDex V4.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
-end)
+-- DarkDex
+Section:NewDropdown("Selecting a version of DarkDex", "Several versions of DarkDex.", {"DarkDex V4", "DarkDex V3", "DarkDex V1.1.0 Alpha"}, function(dex)
+    if dex == "DarkDex V4" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V4", true))()
+    elseif dex == "DarkDex V3" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V3", true))()
+    elseif dex == "DarkDex V1.1.0 Alpha" then
+        loadstring(game:HttpGet("https://github.com/HackerMan33106/DarkDex/raw/main/DarkDex-V1.1.0%20Alpha", true))()
+        end
+    end)
 
 -- Infinite Yeild
 Section:NewButton("Inject Infinite Yeild", "You inject Infinite Yeild.", function()
@@ -356,31 +418,23 @@ Section:NewTextBox("Your script", "Paste the link to your script here.", functio
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---[[
---- 9 Section Developer GUI
-local Tab = Window:NewTab("Developer")
-local Section = Tab:NewSection("Developer GUI")
 
-local password = "04102009"
-
-Section:NewTextBox("Developer GUI", "Test", function(passcheck)
-	if passcheck == password then
-            loadstring(game:HttpGet(""))()
-    elseif passcheck ~= password then
-            print("Nice try bruh")
-    end
-end)
-]]
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---- 10 Section Credit
+--- 8 Section Credit
 -- Credit
 local Tab = Window:NewTab("Credit")
 local Section = Tab:NewSection("By HackerMan33105")
 
-Section:NewLabel("Helped with ideas _trrrr")
-Section:NewLabel("Helped with script ChatGPT")
-Section:NewLabel("Made according to the Robojini guide")
-Section:NewButton("His discord", "Click to copy the link.", function()
+Section:NewLabel("Helped with ideas ---> rusterd")
+Section:NewLabel("Made a GUI guide ---> Robojini")
+Section:NewButton("This is Robojini's discord", "Click to copy the link.", function()
     setclipboard("https://discord.gg/E4BdnAXsuE")
 end)
+Section:NewButton("Here's Robojini's YouTube channel", "Click to copy the link.", function()
+    setclipboard("https://www.youtube.com/@Robojini")
+end)
+
+local ws = game:GetService("Workspace")
+local vs = Instance.new("StringValue")
+    vs.Name = "NameValue"
+    vs.Value = "Abobatest"
+    vs.Parent = workspace
