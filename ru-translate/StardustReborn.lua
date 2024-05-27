@@ -1,7 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 local Window = Library.CreateLib("Stardust Reborn", "RJTheme1")
 
---- 1 Section Teleporting
+-- 1 Section Teleporting
 local Tab = Window:NewTab("Телепортация")
 local Section = Tab:NewSection("Телепорт")
 
@@ -98,7 +98,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 3 Section Teleport to Items
+-- 3 Section Teleport to Items
 local Tab = Window:NewTab("Тп к предметам")
 local Section = Tab:NewSection("Телепорт")
 
@@ -116,7 +116,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 4 Section Misc
+-- 4 Section Misc
 local Tab = Window:NewTab("Остальное")
 local Section = Tab:NewSection("Остальное")
 
@@ -164,7 +164,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 5 Section Fun
+-- 5 Section Fun
 -- Fun
 local Tab = Window:NewTab("Веселье")
 local Section = Tab:NewSection("Веселье")
@@ -193,7 +193,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 6 Section Other scripts
+-- 6 Section Other scripts
 -- Other scripts
 local Tab = Window:NewTab("Другие скрипты")
 local Section = Tab:NewSection("Скрипты")
@@ -226,7 +226,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 7 Section Credit
+-- 7 Section Credit
 -- Credit
 local Tab = Window:NewTab("Благодарности")
 local Section = Tab:NewSection("Создал HackerMan33105")
