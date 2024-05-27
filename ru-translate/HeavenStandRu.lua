@@ -6,7 +6,7 @@ local Tab = Window:NewTab("Телепортация")
 local Section = Tab:NewSection("Телепорт")
 
 -- Teleport to bosses
-Section:NewDropdown("Телепот к боссам", "Вы телепортируетесь к боссам.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "Sisyphus Prime", "just a cosmic garou"}, function(teleport)
+Section:NewDropdown("Телепорт к боссам", "Вы телепортируетесь к боссам.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "Sisyphus Prime", "just a cosmic garou"}, function(teleport)
 if teleport == "DIO" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies.DIO.HumanoidRootPart.CFrame
 elseif teleport == "Silver Chariot Requiem" then
@@ -29,7 +29,7 @@ elseif teleport == "just a cosmic garou" then
 end)
 
 -- Teleport to NPC
-Section:NewDropdown("Телепортация к НПС", "Вы телепортируетесь к НПС.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Toji", "Yuta"}, function(npc)
+Section:NewDropdown("Телепорт к НПС", "Вы телепортируетесь к НПС.", {"Shop", "Seller", "Pucci", "RaymondZl", "Boxing Master", "Gojo", "Toji", "Yuta"}, function(npc)
 if npc == "Shop" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC.Shop.HumanoidRootPart.CFrame
 elseif npc == "Seller" then
@@ -50,7 +50,7 @@ elseif npc == "Yuta" then
 end)
 
 -- Teleport to dummy
-Section:NewDropdown("Телепортация к манекенам", "Вы телепортируетесь к манекенам.", {"Dummy", "300 Health Dummy", "Blocking dummy", "Attacking dummy", "Numbness dummy"}, function(dummy)
+Section:NewDropdown("Телепорт к манекенам", "Вы телепортируетесь к манекенам.", {"Dummy", "300 Health Dummy", "Blocking dummy", "Attacking dummy", "Numbness dummy"}, function(dummy)
 if dummy == "Dummy" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["just a dummy"].HumanoidRootPart.CFrame
 elseif dummy == "300 Health Dummy" then
@@ -118,7 +118,7 @@ elseif slow == "just a cosmic garou" then
 end)
 
 -- Instant kill bosses
-Section:NewDropdown("Моментальное убийство босса", "Вы моментально убиваете босса.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "Sisyphus Prime", "just a cosmic garou"}, function(kill)
+Section:NewDropdown("Моментальное убийство боссов", "Вы моментально убиваете босса.", {"DIO", "Silver Chariot Requiem", "Garou", "Asta", "Vergil", "Minos Prime", "Sakuya Izayoi", "Sisyphus Prime", "just a cosmic garou"}, function(kill)
 if kill == "DIO" then
         game:GetService("Workspace").Enemies.DIO.Humanoid.RigType = 1
         wait(1)
