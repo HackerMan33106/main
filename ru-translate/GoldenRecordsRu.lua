@@ -1,7 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 local Window = Library.CreateLib("Golden Records", "RJTheme1")
 
---- 1 Section Teleporting
+-- 1 Section Teleporting
 local Tab = Window:NewTab("Телепортация")
 local Section = Tab:NewSection("Телепорт")
 
@@ -162,7 +162,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 2 Bosses, Enemies and Dummy
+-- 2 Bosses, Enemies and Dummy
 local Tab = Window:NewTab("Bosses and Enemies")
 local Section = Tab:NewSection("Bosses and Enemies")
 
@@ -192,7 +192,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 3 Teleport to items and etc.
+-- 3 Teleport to items and etc.
 local Tab = Window:NewTab("Предметы и остальное")
 local Section = Tab:NewSection("Предметы и остальное")
 
@@ -211,7 +211,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 4 Section Misc
+-- 4 Section Misc
 local Tab = Window:NewTab("Остальное")
 local Section = Tab:NewSection("Остальное")
 
@@ -264,7 +264,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 5 Section Fun
+-- 5 Section Fun
 local Tab = Window:NewTab("Веселье")
 local Section = Tab:NewSection("Веселье")
 
@@ -291,7 +291,8 @@ Section:NewKeybind("Сесть", "Вы садитесь.", Enum.KeyCode.X, funct
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---- 6 Section Other scripts
+
+-- 6 Section Other scripts
 -- Other scripts
 local Tab = Window:NewTab("Другие скрипты")
 local Section = Tab:NewSection("Скрипты")
@@ -324,7 +325,7 @@ Section:NewDropdown("Выбор версии DarkDex", "Несколько ве�
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 7 Section Credit
+-- 7 Section Credit
 -- Credit
 local Tab = Window:NewTab("Благодарности")
 local Section = Tab:NewSection("Создал HackerMan33105")
