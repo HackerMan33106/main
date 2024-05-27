@@ -432,5 +432,3 @@ end)
 Section:NewButton("Here's Robojini's YouTube channel", "Click to copy the link.", function()
     setclipboard("https://www.youtube.com/@Robojini")
 end)
-
-game:GetService("Workspace").NameValue:Destroy()
