@@ -393,14 +393,14 @@ local Section = Tab:NewSection("Scripts")
 
 -- DarkDex
 Section:NewDropdown("Selecting a version of DarkDex", "Several versions of DarkDex.", {"DarkDex V4", "DarkDex V3", "DarkDex V1.1.0 Alpha"}, function(dex)
-    if dex == "DarkDex V4" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V4", true))()
-    elseif dex == "DarkDex V3" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V3", true))()
-    elseif dex == "DarkDex V1.1.0 Alpha" then
-        loadstring(game:HttpGet("https://github.com/HackerMan33106/DarkDex/raw/main/DarkDex-V1.1.0%20Alpha", true))()
-        end
-    end)
+if dex == "DarkDex V4" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V4", true))()
+elseif dex == "DarkDex V3" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V3", true))()
+elseif dex == "DarkDex V1.1.0 Alpha" then
+    loadstring(game:HttpGet("https://github.com/HackerMan33106/DarkDex/raw/main/DarkDex-V1.1.0%20Alpha", true))()
+    end
+end)
 
 -- Infinite Yeild
 Section:NewButton("Inject Infinite Yeild", "You inject Infinite Yeild.", function()
