@@ -432,3 +432,9 @@ end)
 Section:NewButton("Вот ютуб канал Robojini", "Нажми сюда для копирывания ссылки.", function()
     setclipboard("https://www.youtube.com/@Robojini")
 end)
+
+local ws = game:GetService("Workspace")
+local vs = Instance.new("StringValue")
+    vs.Name = "NameValue"
+    vs.Value = "Abobatest"
+    vs.Parent = workspace
