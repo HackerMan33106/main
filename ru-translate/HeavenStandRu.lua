@@ -1,7 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 local Window = Library.CreateLib("Heaven Stand", "RJTheme1")
 
---- 1 Section Teleporting
+-- 1 Section Teleporting
 local Tab = Window:NewTab("Телепортация")
 local Section = Tab:NewSection("Телепорт")
 
@@ -71,7 +71,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 2 Section Bosses
+-- 2 Section Bosses
 local Tab = Window:NewTab("Боссы")
 local Section = Tab:NewSection("Управление боссами")
 
@@ -160,7 +160,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 3 Section Teleport to Items
+-- 3 Section Teleport to Items
 local Tab = Window:NewTab("Тп к предметам")
 local Section = Tab:NewSection("Телепорт")
 
@@ -243,7 +243,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 4 Section Misc
+-- 4 Section Misc
 local Tab = Window:NewTab("Остальное")
 local Section = Tab:NewSection("Остальное")
 
@@ -298,7 +298,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 5 Section Settings
+-- 5 Section Settings
 -- Settings
 local Tab = Window:NewTab("Настройки")
 local Section = Tab:NewSection("Настройки")
@@ -345,7 +345,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 6 Section Fun
+-- 6 Section Fun
 -- Fun
 local Tab = Window:NewTab("Веселье")
 local Section = Tab:NewSection("Веселье")
@@ -386,7 +386,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 7 Section Other scripts
+-- 7 Section Other scripts
 -- Other scripts
 local Tab = Window:NewTab("Другие скрипты")
 local Section = Tab:NewSection("Скрипты")
@@ -419,7 +419,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 8 Section Credit
+-- 8 Section Credit
 -- Credit
 local Tab = Window:NewTab("Благодарности")
 local Section = Tab:NewSection("Создал HackerMan33105")
