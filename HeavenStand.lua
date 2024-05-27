@@ -376,7 +376,7 @@ Section:NewTextBox("Player Info", "Enter nickname for info(Incorrect nickname no
         vs.Value = pi
         vs.Parent = workspace
     wait(0.5)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/main/PlayerInfo.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/main/PlayerInfo-HeavenStand.lua", true))()
 end)
 
 -- Sit
