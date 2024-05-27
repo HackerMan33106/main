@@ -376,7 +376,7 @@ Section:NewTextBox("Инфо про игрока", "Введите ник для
         vs.Value = pi
         vs.Parent = workspace
     wait(0.5)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/main/ru-translate/PlayerInfoRu.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/main/ru-translate/PlayerInfoRu-HeavenStand.lua", true))()
 end)
 
 -- Sit
@@ -433,8 +433,4 @@ Section:NewButton("Вот ютуб канал Robojini", "Нажми сюда д
     setclipboard("https://www.youtube.com/@Robojini")
 end)
 
-local ws = game:GetService("Workspace")
-local vs = Instance.new("StringValue")
-    vs.Name = "NameValue"
-    vs.Value = "Abobatest"
-    vs.Parent = workspace
+game:GetService("Workspace").NameValue:Destroy()
