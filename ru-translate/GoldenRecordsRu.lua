@@ -103,21 +103,21 @@ Section:NewDropdown("Телепорт к мусору", "Вы телепорти
 if trash == "Мусор 1" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1193.05176, 771.358521, -2026.44385, -0.601351619, 0, 0.798984647, 0, 1, 0, -0.798984647, 0, -0.601351619)
 elseif trash == "Мусор 2" then
-    game.Players.МусорPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1561.79712, 752.455383, -1639.07764, -0.790538669, 0, -0.612412214, 0, 1, 0, 0.612412214, 0, -0.790538669)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1561.79712, 752.455383, -1639.07764, -0.790538669, 0, -0.612412214, 0, 1, 0, 0.612412214, 0, -0.790538669)
 elseif trash == "Мусор 3" then
-    game.Players.МусорPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1674.78101, 774.22345, -1914.88025, -0.790538669, 0, -0.612412214, 0, 1, 0, 0.612412214, 0, -0.790538669)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1674.78101, 774.22345, -1914.88025, -0.790538669, 0, -0.612412214, 0, 1, 0, 0.612412214, 0, -0.790538669)
 elseif trash == "Мусор 4" then
-    game.Players.МусорPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1153.06604, 753.276978, -1620.0564, 0.051210165, 0, 0.998687863, 0, 1, 0, -0.998687863, 0, 0.051210165)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1153.06604, 753.276978, -1620.0564, 0.051210165, 0, 0.998687863, 0, 1, 0, -0.998687863, 0, 0.051210165)
 elseif trash == "Мусор 5" then
-    game.Players.МусорPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-855.703674, 751.294983, -2212.13696, 0.10996455, -0, -0.993935525, 0, 1, -0, 0.993935525, 0, 0.10996455)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-855.703674, 751.294983, -2212.13696, 0.10996455, -0, -0.993935525, 0, 1, -0, 0.993935525, 0, 0.10996455)
 elseif trash == "Мусор 6" then
-    game.Players.МусорPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-641.170105, 751.294983, -1601.64636, 0.999967754, 0, 0.00802788325, 0, 1, 0, -0.00802788325, 0, 0.999967754)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-641.170105, 751.294983, -1601.64636, 0.999967754, 0, 0.00802788325, 0, 1, 0, -0.00802788325, 0, 0.999967754)
 elseif trash == "Мусор 7" then
-    game.Players.МусорPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1994.94299, 753.174194, -1709.40039, 0.999967754, 0, 0.00802788325, 0, 1, 0, -0.00802788325, 0, 0.999967754)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1994.94299, 753.174194, -1709.40039, 0.999967754, 0, 0.00802788325, 0, 1, 0, -0.00802788325, 0, 0.999967754)
 elseif trash == "Мусор 8" then
-    game.Players.МусорPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1559.79199, 770.79718, -2179.97974, -0.481579065, 0, -0.876402736, 0, 1, 0, 0.876402736, 0, -0.481579065)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1559.79199, 770.79718, -2179.97974, -0.481579065, 0, -0.876402736, 0, 1, 0, 0.876402736, 0, -0.481579065)
 elseif trash == "Мусор 9" then
-    game.Players.МусорPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1353.31006, 771.358521, -2246.54639, -0.481579065, 0, -0.876402736, 0, 1, 0, 0.876402736, 0, -0.481579065)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1353.31006, 771.358521, -2246.54639, -0.481579065, 0, -0.876402736, 0, 1, 0, 0.876402736, 0, -0.481579065)
 elseif trash == "Мусор 10" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-885.841736, 753.264648, -1453.20496, -0.481579065, 0, -0.876402736, 0, 1, 0, 0.876402736, 0, -0.481579065)
     end
