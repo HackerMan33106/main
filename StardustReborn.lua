@@ -412,9 +412,9 @@ part.Name = "SafeZone"
 part.Size = Vector3.new(10, 1, 10)
 part.Anchored = true
 part.CanCollide = true
-part.CFrame = CFrame.new(5454.37549, 50, 837.117554, 0.977138579, -6.786256e-09, -0.212603286, -3.76957132e-09, 1, -4.92450027e-08, 0.212603286, 4.89206187e-08, 0.977138579)
+part.CFrame = CFrame.new(5454.37549, 30, 837.117554, 0.977138579, -6.786256e-09, -0.212603286, -3.76957132e-09, 1, -4.92450027e-08, 0.212603286, 4.89206187e-08, 0.977138579)
 part.Parent = game.Workspace
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5454.37549, 55, 837.117554, 0.977138579, -6.786256e-09, -0.212603286, -3.76957132e-09, 1, -4.92450027e-08, 0.212603286, 4.89206187e-08, 0.977138579)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5454.37549, 35, 837.117554, 0.977138579, -6.786256e-09, -0.212603286, -3.76957132e-09, 1, -4.92450027e-08, 0.212603286, 4.89206187e-08, 0.977138579)
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 end)
 
