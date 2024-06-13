@@ -2,11 +2,11 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Roboj
 local Window = Library.CreateLib("Stardust Reborn V1.5", "RJTheme1")
 
 -- 1 Section Teleporting
-local Tab = Window:NewTab("Teleporting")
-local Section = Tab:NewSection("Teleport")
+local Tab = Window:NewTab("Телепортация")
+local Section = Tab:NewSection("Телепорт")
 
 -- Teleport to bosses
-Section:NewDropdown("Teleport to bosses", "You teleport to the bosses.", {"DIO", "Diavolo", "Giorno Giovanna", "Chaka"}, function(teleport)
+Section:NewDropdown("Телепорт к боссам", "Вы телепортируетесь к боссам.", {"DIO", "Diavolo", "Giorno Giovanna", "Chaka", "Goku"}, function(teleport)
 if teleport == "DIO" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Alive.DIO.HumanoidRootPart.CFrame
 elseif teleport == "Diavolo" then
@@ -19,7 +19,7 @@ elseif teleport == "Chaka" then
 end)
 
 -- Teleport to NPC
-Section:NewDropdown("Teleport to NPC", "You teleport to the NPC.", {"Enrico Pucci", "Jotaro", "VerifiedPixel", "Becca", "TheForgotten0range", "k7rdan", "Shadow DIO", "Goku"}, function(npc)
+Section:NewDropdown("Телепортация к НПС", "Вы телепортируетесь к НПС.", {"Enrico Pucci", "Jotaro", "VerifiedPixel", "Giorno Giovanna", "Becca", "TheForgotten0range", "k7rdan", "Shadow DIO", "Goku"}, function(npc)
     if npc == "Enrico Pucci" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.NPC["Enrico Pucci"].HumanoidRootPart.CFrame
 elseif npc == "Jotaro" then
@@ -40,7 +40,7 @@ elseif npc == "Goku" then
 end)
 
 -- Teleport to dummy
-Section:NewDropdown("Teleport to dummy", "You teleport to dummy.", {"Immortal Dummy", "Mortal Dummy", "Block Dummy", "Perfect Block Dummy", "Deflect Dummy", "Barraging Dummy"}, function(dummy)
+Section:NewDropdown("Телепортация к манекенам", "Вы телепортируетесь к манекенам.", {"Immortal Dummy", "Mortal Dummy", "Block Dummy", "Perfect Block Dummy", "Deflect Dummy", "Barraging Dummy"}, function(dummy)
     if dummy == "Immortal Dummy" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Alive["Immortal Dummy"].HumanoidRootPart.CFrame
 elseif dummy == "Mortal Dummy" then
@@ -57,7 +57,7 @@ elseif dummy == "Barraging Dummy" then
 end)
 
 -- Teleport to players
-Section:NewTextBox("Teleport to players", "Enter nickname for teleport.", function(ply)
+Section:NewTextBox("Телепорт к игроку", "Введите ник для телепортации.", function(ply)
     local player = game.Players:FindFirstChild(ply)
     
     if player then
@@ -67,8 +67,8 @@ Section:NewTextBox("Teleport to players", "Enter nickname for teleport.", functi
         end
     else
         game.StarterGui:SetCore("SendNotification", {
-            Title = "Error",
-            Text = "Player not found",
+            Title = "Ошибка",
+            Text = "Игрок не найден",
             Duration = 3
         })
     end
@@ -77,50 +77,50 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 --- 2 Section Bosses
-local Tab = Window:NewTab("Bosses")
-local Section = Tab:NewSection("Bosses management")
+local Tab = Window:NewTab("Боссы")
+local Section = Tab:NewSection("Управление боссами")
 
 -- Nic
-Section:NewLabel("Nothing here yet :(")
+Section:NewLabel("Здесь пока что ничего нет :(")
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- 3 Section Teleport to Items
-local Tab = Window:NewTab("Teleporting to items")
-local Section = Tab:NewSection("Teleport")
+local Tab = Window:NewTab("Тп к предметам")
+local Section = Tab:NewSection("Телепорт")
 
 -- Teleport to Arrow
-Section:NewButton("Teleport to arrow", "You teleport to the arrow.", function()
+Section:NewButton("Телепорт к стрелам", "Вы телепортируетесь к стрелам.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Items.Arrow.Handle.CFrame
 end)
 
 -- Teleport to Rokakaka
-Section:NewButton("Teleport to rokakaka", "You teleport to rokakaka.", function()
+Section:NewButton("Телепорт к рокакаке", "Вы телепортируетесь к рокакакам.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Items.Roka.Handle.CFrame
 end)
 
 -- Teleport to Boxing Glove
-Section:NewButton("Teleport to boxing gloves", "You teleport to boxing gloves.", function()
+Section:NewButton("Телепорт к боксерским перчаткам", "Вы телепортируетесь к боксерским перчаткам.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Items["Boxing Glove"].Handle.CFrame
 end)
 
 -- Teleport to Dragon Ball
-Section:NewButton("Teleport to dragon ball", "You teleport to dragon ball.", function()
+Section:NewButton("Телепорт к драконьему шару", "Вы телепортируетесь к драконьему шару.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Items["Dragon Ball"].Handle.CFrame
 end)
 
 -- Teleport to Jotaro's Hat
-Section:NewButton("Teleport to Jotaro's hat", "You teleport to Jotaro's hat.", function()
+Section:NewButton("Телепорт к шапке Джотаро", "Вы телепортируетесь к шапке Джотаро.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Items["Jotaro's Hat"].Handle.CFrame
 end)
 
 -- Teleport to Blindfold
-Section:NewButton("Teleport to blindfold", "You teleport to blindfold.", function()
+Section:NewButton("Телепорт к повязке", "Вы телепортируетесь к повязке.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Items.Blindfold.Handle.CFrame
 end)
 
 -- Teleport to all item spawns
-Section:NewButton("Teleport to all item spawns", "You teleport to all item spawns.", function()
+Section:NewButton("Телепорт ко всем спавнам предметов", "Вы телепортируетесь ко всем спавнам предметов.", function()
 local PlayerPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5224.83594, 63.1586914, 629.839966, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     wait(0.5)
@@ -146,8 +146,8 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- 4 Section items to player
-local Tab = Window:NewTab("Items to player")
-local Section = Tab:NewSection("Automatic teleportation of items")
+local Tab = Window:NewTab("Предметы к игроку")
+local Section = Tab:NewSection("Автоматическая телепортация предметов")
 
 -- Arrow
 local running = true
@@ -175,7 +175,7 @@ local function disableTeleportationToArrow()
     running = false
 end
 
-Section:NewToggle("Arrows", "Arrows are automatically teleported to you.", function(aar)
+Section:NewToggle("Стрелы", "К вам автоматически телепортируются стрелы.", function(aar)
     if aar then
         enableTeleportationToArrow()
     else
@@ -209,7 +209,7 @@ local function disableTeleportationToRoka()
     running = false
 end
 
-Section:NewToggle("Rokakaka", "Rokakaks are automatically teleported to you.", function(aro)
+Section:NewToggle("Рокакака", "К вам автоматически телепортируются рокакаки.", function(aro)
     if aro then
         enableTeleportationToRoka()
     else
@@ -243,7 +243,7 @@ local function disableTeleportationToBG()
     running = false
 end
 
-Section:NewToggle("Boxing Gloves", "Boxing gloves are automatically teleported to you.", function(abg)
+Section:NewToggle("Боксерские перчатки", "К вам автоматически телепортируются боксерские перчатки.", function(abg)
     if abg then
         enableTeleportationToBG()
     else
@@ -277,7 +277,7 @@ local function disableTeleportationToDB()
     running = false
 end
 
-Section:NewToggle("Dragon ball", "A dragon ball is automatically teleported to you.", function(adb)
+Section:NewToggle("Драконий шар", "К вам автоматически телепортируется драконий шар.", function(adb)
     if adb then
         enableTeleportationToDB()
     else
@@ -311,7 +311,7 @@ local function disableTeleportationToJH()
     running = false
 end
 
-Section:NewToggle("Jotaro's hat", "Jotaro's hat is automatically teleported to you.", function(ajh)
+Section:NewToggle("Шапка Джотаро", "К вам автоматически телепортируется шапка Джотаро.", function(ajh)
     if ajh then
         enableTeleportationToJH()
     else
@@ -345,7 +345,7 @@ local function disableTeleportationToB()
     running = false
 end
 
-Section:NewToggle("Blindfold", "A blindfold is automatically teleported to you.", function(ab)
+Section:NewToggle("Повязка", "К вам автоматически телепортируется Повязка.", function(ab)
     if ab then
         enableTeleportationToB()
     else
@@ -356,31 +356,31 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- 5 Section Misc
-local Tab = Window:NewTab("Misc")
-local Section = Tab:NewSection("Misc")
+local Tab = Window:NewTab("Остальное")
+local Section = Tab:NewSection("Остальное")
 
 -- Speed
-Section:NewSlider("Speed", "You can control your speed.", 500, 16, function(speed)
+Section:NewSlider("Скорость", "Вы управляете своей скоростью.", 500, 16, function(speed)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
 end)
 
 -- Hip Height
-Section:NewSlider("Hip Height", "You can control your height.", 50, 0, function(height)
+Section:NewSlider("Высота персонажа", "Вы управляете своей высотой персонажа.", 50, 0, function(height)
     game.Players.LocalPlayer.Character.Humanoid.HipHeight = height
 end)
 
 -- Gravity
-Section:NewSlider("Gravity", "You can control your gravity.", -1000, 196.2, function(gravity)
+Section:NewSlider("Гравитация", "Вы управляете своей гравитецией.", -1000, 196.2, function(gravity)
     game:GetService("Workspace").Gravity = gravity
 end)
 
 -- Suicide
-Section:NewButton("Kill yourself", "You are dying.", function()
+Section:NewButton("Самоубийство", "Вы умираете.", function()
     game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 
 -- Noclip on/off
-Section:NewToggle("Noclip", "You can walk through walls, objects, etc.", function(nc)
+Section:NewToggle("Noclip", "Возможность проходить сквозь объекты.", function(nc)
 if nc then
         while game:GetService("RunService").RenderStepped:wait() do
     game.Players.LocalPlayer.Character.Head.CanCollide = false
@@ -397,7 +397,7 @@ end
 end)
 
 -- Emergency shutdown noclip
-Section:NewButton("Emergency shutdown noclip", "In case noclip does not work.", function()
+Section:NewButton("Экстренное отключения noclip", "В случае если не работает noclip.", function()
 local PlayerPositions = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     wait(1)
     game.Players.LocalPlayer.Character.Humanoid.Health = 0
@@ -405,7 +405,7 @@ local PlayerPositions = game.Players.LocalPlayer.Character.HumanoidRootPart.CFra
 end)
 
 -- Save Zone
-Section:NewButton("Save Zone", "You're moving underground.", function()
+Section:NewButton("Безопасная зона", "Вы перемещаетесь под землю.", function()
 backPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local part = Instance.new("Part")
 part.Name = "SafeZone"
@@ -419,13 +419,13 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 end)
 
 -- Save Zone back
-Section:NewButton("Returning from the safe zone", "You move to a location where you have moved to a safe zone.", function()
+Section:NewButton("Возвращение с безопасной зоны", "Вы перемещаетесь в место где вы переместились в безопасную зону.", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = backPos
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end)
 
 -- ESP
-Section:NewButton("ESP", "You can see the players through the wall.", function()
+Section:NewButton("ESP", "Вы теперь видете игроков через стены.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/ESP/main/ESP.lua", true))()
 end)
 
@@ -433,11 +433,11 @@ end)
 
 -- 6 Section Fun
 -- Fun
-local Tab = Window:NewTab("Fun")
-local Section = Tab:NewSection("Fun")
+local Tab = Window:NewTab("Веселье")
+local Section = Tab:NewSection("Веселье")
 
 -- Undressing the players
-Section:NewTextBox("Undressing the plr", "Enter nickname to undress.", function(utp)
+Section:NewTextBox("Раздевание игрока", "Введите никнейм игрока.", function(utp)
     local player = game.Players:FindFirstChild(utp)
     
     if player then
@@ -449,8 +449,8 @@ Section:NewTextBox("Undressing the plr", "Enter nickname to undress.", function(
         end
     else
         game.StarterGui:SetCore("SendNotification", {
-            Title = "Error",
-            Text = "Player not found",
+            Title = "Ошибка",
+            Text = "Игрок не найден",
             Duration = 3
         })
     end
@@ -460,17 +460,17 @@ Section:NewTextBox("Undressing the plr", "Enter nickname to undress.", function(
 end)
 
 -- Field Of Viev
-Section:NewSlider("Field Of Viev", "You can control your field of viev.", 120, 1, function(fov)
+Section:NewSlider("FOV", "Вы можете контролировать свой FOV.", 120, 1, function(fov)
     game:GetService("Workspace").Camera.FieldOfView = fov
 end)
 
 -- Default field of viev
-Section:NewButton("Default field of viev", "You set Default field of view.", function()
+Section:NewButton("Обычный FOV", "Вы ставете себе обычный FOV.", function()
     game:GetService("Workspace").Camera.FieldOfView = 70
 end)
 
 -- Sit
-Section:NewKeybind("Sit", "You sit down.", Enum.KeyCode.V, function()
+Section:NewKeybind("Сесть", "Вы садитесь.", Enum.KeyCode.V, function()
 	game.Players.LocalPlayer.Character.Humanoid.Sit = true 
 end)
 
@@ -478,26 +478,26 @@ end)
 
 --- 7 Section Settings
 -- Settings
-local Tab = Window:NewTab("Settings")
-local Section = Tab:NewSection("Settings")
+local Tab = Window:NewTab("Настройки")
+local Section = Tab:NewSection("Настройки")
 
-Section:NewButton("Turning off blur", "You're turning off blur forever.", function()
+Section:NewButton("Отключение блюра", "Вы отключаете навсегда блюр.", function()
     game.Lighting.Blur:Destroy()
 end)
 
-Section:NewButton("Disabling color correction", "You permanently disable color correction.", function()
+Section:NewButton("Отключение коррекции цвета", "Вы навсегда отключаете коррекцию цвета.", function()
     game.Lighting.ColorCorrection:Destroy()
 end)
 
-Section:NewButton("Always daytime", "Endless day.", function()
+Section:NewButton("Всегда день", "Бесконечный день.", function()
     game.Lighting.Settings.DayNightCycle.Value = false
 end)
 
-Section:NewButton("Cutscene off", "Turning off cutscenes.", function()
+Section:NewButton("Выкл катсцен", "Бесконечный день.", function()
     game.Lighting.Settings.Cutscenes.Value = false
 end)
 
-Section:NewButton("The inclusion of horribly bad graphics", "You're turning on permanently bad graphics.", function()
+Section:NewButton("Включение ужасно плохой графики", "Вы включаете навсегда плохую графику.", function()
     game:GetService("Workspace").Game.Misc:Destroy()
     game:GetService("Workspace").Game.Hitboxes:Destroy()
     game:GetService("Workspace").Game.Effects:Destroy()
@@ -516,11 +516,11 @@ end)
 
 -- 8 Section Other scripts
 -- Other scripts
-local Tab = Window:NewTab("Other scripts")
-local Section = Tab:NewSection("Scripts")
+local Tab = Window:NewTab("Другие скрипты")
+local Section = Tab:NewSection("Скрипты")
 
 -- DarkDex
-Section:NewDropdown("Selecting a version of DarkDex", "A few versions of DarkDex.", {"DarkDex V4", "DarkDex V3", "DarkDex V1.1.0 Alpha"}, function(dex)
+Section:NewDropdown("Выбор версии DarkDex", "Несколько версий DarkDex.", {"DarkDex V4", "DarkDex V3", "DarkDex V1.1.0 Alpha"}, function(dex)
 if dex == "DarkDex V4" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V4", true))()
 elseif dex == "DarkDex V3" then
@@ -531,12 +531,12 @@ elseif dex == "DarkDex V1.1.0 Alpha" then
 end)
 
 -- Infinite Yeild
-Section:NewButton("Inject Infinite Yeild", "You inject Infinite Yeild.", function()
+Section:NewButton("Заинжектить Infinite Yeild", "Вы внедряете Infinite Yeild.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Infinite-yeild/main/Infiniteyeild.lua", true))()
 end)
 
 -- Your script
-Section:NewTextBox("Your script", "Paste the link to your script here.", function(uscript)
+Section:NewTextBox("Твой скрипт", "Введите ссылку своего скрипта сюда.", function(uscript)
 	loadstring(game:HttpGet(uscript, true))()
 end)
 
@@ -544,14 +544,14 @@ end)
 
 -- 9 Section Credit
 -- Credit
-local Tab = Window:NewTab("Credit")
-local Section = Tab:NewSection("By HackerMan33105")
+local Tab = Window:NewTab("Благодарности")
+local Section = Tab:NewSection("Создал HackerMan33105")
 
-Section:NewLabel("Helped with ideas ---> rusterd")
-Section:NewLabel("Made a GUI guide ---> Robojini")
-Section:NewButton("Here's Robojini's discord", "Click here to copy the link.", function()
+Section:NewLabel("Помогал с идеями ---> rusterd")
+Section:NewLabel("Сделал гайд по GUI ---> Robojini")
+Section:NewButton("Вот дискорд Robojini", "Нажми сюда для копирования ссылки.", function()
     setclipboard("https://discord.gg/E4BdnAXsuE")
 end)
-Section:NewButton("Here's Robojini's YouTube channel", "Click here to copy the link.", function()
+Section:NewButton("Вот ютуб канал Robojini", "Нажми сюда для копирования ссылки.", function()
     setclipboard("https://www.youtube.com/@Robojini")
 end)
