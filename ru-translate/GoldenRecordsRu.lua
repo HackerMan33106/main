@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
-local Window = Library.CreateLib("Golden Records", "RJTheme1")
+local Window = Library.CreateLib("Golden Records V1.4", "RJTheme1")
 
 -- 1 Section Teleporting
 local Tab = Window:NewTab("Телепортация")
@@ -77,7 +77,7 @@ elseif npc == "Archvox" then
 elseif npc == "Prime Fridia" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPCs["Prime Fridia"].HumanoidRootPart.CFrame
 elseif npc == "Fisherman" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPCs.Fisherman.HumanoidRootPart.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPCs["Fisherman 2"].HumanoidRootPart.CFrame
     end
 end)
 
@@ -156,15 +156,28 @@ elseif bg == "Блестящий геод 6" then
 end)
 
 -- Teleport to players
-Section:NewTextBox("Телепорт к игроку", "Введите ник для телепортации(Неправильный ник не телепортиртирует).", function(ply)
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")[ply].HumanoidRootPart.CFrame
+Section:NewTextBox("Телепорт к игроку", "Введите ник для телепортации.", function(ply)
+    local player = game.Players:FindFirstChild(ply)
+    
+    if player then
+        local character = player.Character
+        if character and character:FindFirstChild("HumanoidRootPart") then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame
+        end
+    else
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Ошибка",
+            Text = "Игрок не найден",
+            Duration = 3
+        })
+    end
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- 2 Bosses, Enemies and Dummy
-local Tab = Window:NewTab("Bosses and Enemies")
-local Section = Tab:NewSection("Bosses and Enemies")
+local Tab = Window:NewTab("Боссы и враги")
+local Section = Tab:NewSection("Боссы и враги")
 
 -- Teleport to Dummy
 Section:NewDropdown("Телепорт к манекенам", "Вы телепортируетесь к манекенам.", {"Манекен 1", "Манекен 2", "Манекен 3", "Манекен 4"}, function(dummy)
@@ -235,26 +248,61 @@ Section:NewSlider("Гравитация", "Вы управляете своей 
     game:GetService("Workspace").Gravity = gravity
 end)
 
--- Suicide
-Section:NewButton("Самоубийство", "Вы умираете.", function()
+-- Suicide 1
+Section:NewButton("Самоубийство вариант 1", "Вы умираете.", function()
     game.Players.LocalPlayer.Character.Humanoid.RigType = 0
 end)
 
+-- Suicide 2
+Section:NewButton("Самоубийство вариант 2", "Вы умираете.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
 -- Noclip on/off
-Section:NewButton("Включение ноуклипа", "Вы можете проходить через стены и остальное.", function()
-    while game:GetService("RunService").RenderStepped:wait() do
-            game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-            game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+Section:NewToggle("Noclip", "Возможность проходить сквозь объекты.", function(nc)
+if nc then
+        while game:GetService("RunService").RenderStepped:wait() do
+    game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+    game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+    game.Players.LocalPlayer.Character.Head.CanCollide = false
+    end
+    else
+        while game:GetService("RunService").RenderStepped:wait() do
+    game.Players.LocalPlayer.Character.LowerTorso.CanCollide = true
+    game.Players.LocalPlayer.Character.UpperTorso.CanCollide = true
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = true
+    game.Players.LocalPlayer.Character.Head.CanCollide = true
+end
 end
 end)
 
-Section:NewButton("Выключение ноуклипа", "Вы больше не можете проходить через стены и остальное.", function()
-while game:GetService("RunService").RenderStepped:wait() do
-            game.Players.LocalPlayer.Character.LowerTorso.CanCollide = true
-            game.Players.LocalPlayer.Character.UpperTorso.CanCollide = true
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = true
-end
+-- Emergency shutdown noclip
+Section:NewButton("Экстренное отключения noclip", "В случае если не работает noclip.", function()
+local PlayerPositions = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    wait(1)
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = PlayerPositions
+end)
+
+-- Save Zone
+Section:NewButton("Безопасная зона", "Вы перемещаетесь под землю.", function()
+backPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local part = Instance.new("Part")
+part.Name = "SafeZone"
+part.Size = Vector3.new(10, 1, 10)
+part.Anchored = true
+part.CanCollide = true
+part.CFrame = CFrame.new(5454.37549, 30, 837.117554, 0.977138579, -6.786256e-09, -0.212603286, -3.76957132e-09, 1, -4.92450027e-08, 0.212603286, 4.89206187e-08, 0.977138579)
+part.Parent = game.Workspace
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5454.37549, 35, 837.117554, 0.977138579, -6.786256e-09, -0.212603286, -3.76957132e-09, 1, -4.92450027e-08, 0.212603286, 4.89206187e-08, 0.977138579)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+end)
+
+-- Save Zone back
+Section:NewButton("Возвращение с безопасной зоны", "Вы перемещаетесь в место где вы переместились в безопасную зону.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = backPos
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end)
 
 -- ESP
@@ -269,7 +317,23 @@ local Tab = Window:NewTab("Веселье")
 local Section = Tab:NewSection("Веселье")
 
 -- Undressing the players
-Section:NewTextBox("Раздевание игрока", "Введите никнейм игрока(Неправильный ник не раздените).", function(utp)
+Section:NewTextBox("Раздевание игрока", "Введите никнейм игрока.", function(utp)
+    local player = game.Players:FindFirstChild(utp)
+    
+    if player then
+        local character = player.Character or player.CharacterAdded:Wait()
+        for _, accessory in ipairs(character:GetChildren()) do
+            if accessory:IsA("Accessory") then
+                accessory:Destroy()
+            end
+        end
+    else
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Ошибка",
+            Text = "Игрок не найден",
+            Duration = 3
+        })
+    end
     game:GetService("Workspace")[utp].Shirt:Destroy()
 	game:GetService("Workspace")[utp].Pants:Destroy()
     game:GetService("Workspace")[utp]["Shirt Graphic"]:Destroy()
@@ -292,49 +356,79 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--- 6 Section Other scripts
+--- 6 Section Settings
+-- Settings
+local Tab = Window:NewTab("Настройки")
+local Section = Tab:NewSection("Настройки")
+
+-- Ultra optimisation
+local function deleteAllHotbris()
+    local workspace = game:GetService("Workspace")
+    for _, obj in ipairs(workspace:GetChildren()) do
+        if obj.Name == "Hotbris" then
+            obj:Destroy()
+        end
+    end
+end
+
+Section:NewButton("Ультра оптимизация", "Оптимизирует игру.", function()
+    while game:GetService("RunService").RenderStepped:Wait() do
+        deleteAllHotbris()
+    end
+end)
+
+Section:NewButton("Включение ужасно плохой графики", "Вы включаете навсегда плохую графику.", function()
+    game:GetService("Workspace").Terrain.Clouds.Enabled = false
+    game.Lighting.Bloom:Destroy()
+    game.Lighting.Blur:Destroy()
+    game.Lighting.ColorCorrection:Destroy()
+    game.Lighting.DepthOfField:Destroy()
+    game.Lighting.SunRays:Destroy()
+    game.Lighting.Atmosphere:Destroy()
+    while game:GetService("RunService").RenderStepped:Wait() do
+        deleteAllHotbris()
+    end
+end)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 7 Section Other scripts
 -- Other scripts
 local Tab = Window:NewTab("Другие скрипты")
 local Section = Tab:NewSection("Скрипты")
 
 -- DarkDex
 Section:NewDropdown("Выбор версии DarkDex", "Несколько версий DarkDex.", {"DarkDex V4", "DarkDex V3", "DarkDex V1.1.0 Alpha"}, function(dex)
-    if dex == "DarkDex V4" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V4", true))()
-    elseif dex == "DarkDex V3" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V3", true))()
-    elseif dex == "DarkDex V1.1.0 Alpha" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V1.1.0%20Alpha", true))()
-        end
-    end)
-    
-    -- Infinite Yeild
-    Section:NewButton("Заинжектить Infinite Yeild", "Вы внедряете Infinite Yeild.", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Infinite-yeild/main/Infiniteyeild.lua", true))()
-    end)
-    
-    -- CMD-X
-    Section:NewButton("Заинжектить CMD-X", "Вы внедряете CMD-X.", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/CMD-X/main/CMD-X.lua", true))()
-    end)
-    
-    -- Your script
-    Section:NewTextBox("Твой скрипт", "Введите ссылку своего скрипта сюда.", function(uscript)
-        loadstring(game:HttpGet(uscript, true))()
-    end)
+if dex == "DarkDex V4" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V4", true))()
+elseif dex == "DarkDex V3" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V3", true))()
+elseif dex == "DarkDex V1.1.0 Alpha" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V1.1.0%20Alpha", true))()
+    end
+end)
+
+-- Infinite Yeild
+Section:NewButton("Заинжектить Infinite Yeild", "Вы внедряете Infinite Yeild.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Infinite-yeild/main/Infiniteyeild.lua", true))()
+end)
+
+-- Your script
+Section:NewTextBox("Твой скрипт", "Введите ссылку своего скрипта сюда.", function(uscript)
+    loadstring(game:HttpGet(uscript, true))()
+end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--- 7 Section Credit
+-- 8 Section Credit
 -- Credit
 local Tab = Window:NewTab("Благодарности")
 local Section = Tab:NewSection("Создал HackerMan33105")
 
 Section:NewLabel("Помогал с идеями ---> rusterd")
 Section:NewLabel("Сделал гайд по GUI ---> Robojini")
-Section:NewButton("Вот дискорд Robojini", "Нажми сюда для копирывания ссылки.", function()
+Section:NewButton("Вот дискорд Robojini", "Нажми сюда для копирования ссылки.", function()
     setclipboard("https://discord.gg/E4BdnAXsuE")
 end)
-Section:NewButton("Вот ютуб канал Robojini", "Нажми сюда для копирывания ссылки.", function()
+Section:NewButton("Вот ютуб канал Robojini", "Нажми сюда для копирования ссылки.", function()
     setclipboard("https://www.youtube.com/@Robojini")
 end)
