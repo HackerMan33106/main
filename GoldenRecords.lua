@@ -342,7 +342,22 @@ end)
 local Tab = Window:NewTab("Settings")
 local Section = Tab:NewSection("Settings")
 
--- Ultra optimization
+--
+Section:NewButton("Turning off blur", "You're turning off blur forever.", function()
+    game.Lighting.Blur:Destroy()
+end)
+
+--
+Section:NewButton("Disabling color correction", "You permanently disable color correction.", function()
+    game.Lighting.ColorCorrection:Destroy()
+end)
+
+--
+Section:NewButton("Cloud removal", "You are permanently removing clouds.", function()
+    game:GetService("Workspace").Terrain.Clouds:Destroy()
+end)
+
+--
 local function deleteAllHotbris()
     local workspace = game:GetService("Workspace")
     for _, obj in ipairs(workspace:GetChildren()) do
@@ -358,6 +373,7 @@ Section:NewButton("Ultra optimization", "Optimizes the game.", function()
     end
 end)
 
+--
 Section:NewButton("The inclusion of horribly bad graphics", "You're turning on permanently bad graphics.", function()
     game:GetService("Workspace").Terrain.Clouds.Enabled = false
     game.Lighting.Bloom:Destroy()
