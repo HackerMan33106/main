@@ -258,14 +258,6 @@ Section:NewButton("Suicide variant 2", "You are dying.", function()
     game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 
--- Emergency shutdown noclip
-Section:NewButton("Emergency shutdown noclip", "In case noclip does not work.", function()
-local PlayerPositions = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    wait(1)
-    game.Players.LocalPlayer.Character.Humanoid.Health = 0
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = PlayerPositions
-end)
-
 -- Save Zone
 Section:NewButton("Save Zone", "You're moving underground.", function()
 backPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
