@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
-local Window = Library.CreateLib("Golden Records V1.4", "RJTheme1")
+local Window = Library.CreateLib("Golden Records V1.5", "RJTheme1")
 
 -- 1 Section Teleporting
 local Tab = Window:NewTab("Телепортация")
