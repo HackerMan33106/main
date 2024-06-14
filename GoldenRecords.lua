@@ -1,7 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
-local Window = Library.CreateLib("Golden Records", "RJTheme1")
+local Window = Library.CreateLib("Golden Records V1.4", "RJTheme1")
 
---- 1 Section Teleporting
+-- 1 Section Teleporting
 local Tab = Window:NewTab("Teleporting")
 local Section = Tab:NewSection("Teleport")
 
@@ -156,13 +156,26 @@ elseif bg == "Blight geode 6" then
 end)
 
 -- Teleport to players
-Section:NewTextBox("Teleport to players", "Enter a nickname for the person you want to teleport to. (If it doesn't teleport, you entered the wrong nickname.)", function(ply)
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")[ply].HumanoidRootPart.CFrame
+Section:NewTextBox("Teleport to players", "Enter a nickname for the person you want to teleport to.", function(ply)
+    local player = game.Players:FindFirstChild(ply)
+    
+    if player then
+        local character = player.Character
+        if character and character:FindFirstChild("HumanoidRootPart") then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame
+        end
+    else
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Error",
+            Text = "Player not found",
+            Duration = 3
+        })
+    end
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 2 Bosses, Enemies and Dummy
+-- 2 Bosses, Enemies and Dummy
 local Tab = Window:NewTab("Bosses and Enemies")
 local Section = Tab:NewSection("Bosses and Enemies")
 
@@ -192,7 +205,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 3 Teleport to items and etc.
+-- 3 Teleport to items and etc.
 local Tab = Window:NewTab("Items and etc.")
 local Section = Tab:NewSection("Items and etc.")
 
@@ -211,7 +224,7 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 4 Section Misc
+-- 4 Section Misc
 local Tab = Window:NewTab("Misc")
 local Section = Tab:NewSection("Misc")
 
@@ -235,18 +248,42 @@ Section:NewSlider("Gravity", "You can control your gravity.", -1000, 196.2, func
     game:GetService("Workspace").Gravity = gravity
 end)
 
--- Suicide
-Section:NewButton("Kill yourself", "You are dying.", function()
+-- Suicide 1
+Section:NewButton("Suicide variant 1", "You are dying.", function()
     game.Players.LocalPlayer.Character.Humanoid.RigType = 0
 end)
 
--- Noclip
-Section:NewButton("Noclip on", "You can walk through walls, objects, etc.", function()
-        while game:GetService("RunService").RenderStepped:wait() do
-            game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-            game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-    end
+-- Suicide 2
+Section:NewButton("Suicide variant 2", "You are dying.", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
+-- Emergency shutdown noclip
+Section:NewButton("Emergency shutdown noclip", "In case noclip does not work.", function()
+local PlayerPositions = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    wait(1)
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = PlayerPositions
+end)
+
+-- Save Zone
+Section:NewButton("Save Zone", "You're moving underground.", function()
+backPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local part = Instance.new("Part")
+part.Name = "SafeZone"
+part.Size = Vector3.new(10, 1, 10)
+part.Anchored = true
+part.CanCollide = true
+part.CFrame = CFrame.new(5454.37549, 30, 837.117554, 0.977138579, -6.786256e-09, -0.212603286, -3.76957132e-09, 1, -4.92450027e-08, 0.212603286, 4.89206187e-08, 0.977138579)
+part.Parent = game.Workspace
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5454.37549, 35, 837.117554, 0.977138579, -6.786256e-09, -0.212603286, -3.76957132e-09, 1, -4.92450027e-08, 0.212603286, 4.89206187e-08, 0.977138579)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+end)
+
+-- Save Zone back
+Section:NewButton("Returning from the safe zone", "You move to a location where you have moved to a safe zone.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = backPos
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end)
 
 -- ESP
@@ -256,12 +293,28 @@ end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 5 Section Fun
+-- 5 Section Fun
 local Tab = Window:NewTab("Fun")
 local Section = Tab:NewSection("Fun")
 
 -- Undressing the players
-Section:NewTextBox("Undressing the plr", "Enter nickname to undress(wrong nickname = no undressing).", function(utp)
+Section:NewTextBox("Undressing the plr", "Enter nickname to undress.", function(utp)
+    local player = game.Players:FindFirstChild(utp)
+    
+    if player then
+        local character = player.Character or player.CharacterAdded:Wait()
+        for _, accessory in ipairs(character:GetChildren()) do
+            if accessory:IsA("Accessory") then
+                accessory:Destroy()
+            end
+        end
+    else
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Error",
+            Text = "Player not found",
+            Duration = 3
+        })
+    end
     game:GetService("Workspace")[utp].Shirt:Destroy()
 	game:GetService("Workspace")[utp].Pants:Destroy()
     game:GetService("Workspace")[utp]["Shirt Graphic"]:Destroy()
@@ -283,14 +336,56 @@ Section:NewKeybind("Sit", "You sit down.", Enum.KeyCode.X, function()
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---- 6 Section Other scripts
+
+--- 6 Section Settings
+-- Settings
+local Tab = Window:NewTab("Settings")
+local Section = Tab:NewSection("Settings")
+
+-- Ultra optimization
+local function deleteAllHotbris()
+    local workspace = game:GetService("Workspace")
+    for _, obj in ipairs(workspace:GetChildren()) do
+        if obj.Name == "Hotbris" then
+            obj:Destroy()
+        end
+    end
+end
+
+Section:NewButton("Ultra optimization", "Optimizes the game.", function()
+    while game:GetService("RunService").RenderStepped:Wait() do
+        deleteAllHotbris()
+    end
+end)
+
+Section:NewButton("The inclusion of horribly bad graphics", "You're turning on permanently bad graphics.", function()
+    game:GetService("Workspace").Terrain.Clouds.Enabled = false
+    game.Lighting.Bloom:Destroy()
+    game.Lighting.Blur:Destroy()
+    game.Lighting.ColorCorrection:Destroy()
+    game.Lighting.DepthOfField:Destroy()
+    game.Lighting.SunRays:Destroy()
+    game.Lighting.Atmosphere:Destroy()
+    while game:GetService("RunService").RenderStepped:Wait() do
+        deleteAllHotbris()
+    end
+end)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 7 Section Other scripts
 -- Other scripts
 local Tab = Window:NewTab("Other scripts")
 local Section = Tab:NewSection("Scripts")
 
--- DarkDex V4
-Section:NewButton("Inject DarkDex V4", "You inject DarkDex V4.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+-- DarkDex
+Section:NewDropdown("Selecting a version of DarkDex", "A few versions of DarkDex.", {"DarkDex V4", "DarkDex V3", "DarkDex V1.1.0 Alpha"}, function(dex)
+if dex == "DarkDex V4" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V4", true))()
+elseif dex == "DarkDex V3" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V3", true))()
+elseif dex == "DarkDex V1.1.0 Alpha" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V1.1.0%20Alpha", true))()
+    end
 end)
 
 -- Infinite Yeild
@@ -298,26 +393,23 @@ Section:NewButton("Inject Infinite Yeild", "You inject Infinite Yeild.", functio
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Infinite-yeild/main/Infiniteyeild.lua", true))()
 end)
 
--- CMD-X
-Section:NewButton("Inject CMD-X", "You inject CMD-X.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/CMD-X/main/CMD-X.lua", true))()
-end)
-
 -- Your script
 Section:NewTextBox("Your script", "Paste the link to your script here.", function(uscript)
 	loadstring(game:HttpGet(uscript, true))()
 end)
 
-
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---- 7 Section Credit
+-- 8 Section Credit
 -- Credit
 local Tab = Window:NewTab("Credit")
 local Section = Tab:NewSection("By HackerMan33105")
 
-Section:NewLabel("Helped with script ChatGPT")
-Section:NewLabel("Made according to the Robojini guide")
-Section:NewButton("His discord", "Click to copy the link.", function()
+Section:NewLabel("Helped with ideas ---> rusterd")
+Section:NewLabel("Made a GUI guide ---> Robojini")
+Section:NewButton("Here's Robojini's discord", "Click here to copy the link.", function()
     setclipboard("https://discord.gg/E4BdnAXsuE")
+end)
+Section:NewButton("Here's Robojini's YouTube channel", "Click here to copy the link.", function()
+    setclipboard("https://www.youtube.com/@Robojini")
 end)
