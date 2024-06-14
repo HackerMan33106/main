@@ -342,7 +342,7 @@ end)
 local Tab = Window:NewTab("Настройки")
 local Section = Tab:NewSection("Настройки")
 
--- Ultra optimisation
+-- Ultra optimization
 local function deleteAllHotbris()
     local workspace = game:GetService("Workspace")
     for _, obj in ipairs(workspace:GetChildren()) do
