@@ -258,25 +258,6 @@ Section:NewButton("Самоубийство вариант 2", "Вы умира�
     game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 
--- Noclip on/off
-Section:NewToggle("Noclip", "Возможность проходить сквозь объекты.", function(nc)
-if nc then
-        while game:GetService("RunService").RenderStepped:wait() do
-    game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-    game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-    game.Players.LocalPlayer.Character.Head.CanCollide = false
-    end
-    else
-        while game:GetService("RunService").RenderStepped:wait() do
-    game.Players.LocalPlayer.Character.LowerTorso.CanCollide = true
-    game.Players.LocalPlayer.Character.UpperTorso.CanCollide = true
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = true
-    game.Players.LocalPlayer.Character.Head.CanCollide = true
-end
-end
-end)
-
 -- Emergency shutdown noclip
 Section:NewButton("Экстренное отключения noclip", "В случае если не работает noclip.", function()
 local PlayerPositions = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
