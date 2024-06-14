@@ -342,7 +342,22 @@ end)
 local Tab = Window:NewTab("Настройки")
 local Section = Tab:NewSection("Настройки")
 
--- Ultra optimization
+--
+Section:NewButton("Отключение блюра", "Вы отключаете навсегда блюр.", function()
+    game.Lighting.Blur:Destroy()
+end)
+
+--
+Section:NewButton("Отключение коррекции цвета", "Вы навсегда отключаете коррекцию цвета.", function()
+    game.Lighting.ColorCorrection:Destroy()
+end)
+
+--
+Section:NewButton("Удаление облаков", "Вы навсегда удаляете облака.", function()
+    game:GetService("Workspace").Terrain.Clouds:Destroy()
+end)
+
+--
 local function deleteAllHotbris()
     local workspace = game:GetService("Workspace")
     for _, obj in ipairs(workspace:GetChildren()) do
@@ -358,6 +373,7 @@ Section:NewButton("Ультра оптимизация", "Оптимизируе
     end
 end)
 
+--
 Section:NewButton("Включение ужасно плохой графики", "Вы включаете навсегда плохую графику.", function()
     game:GetService("Workspace").Terrain.Clouds.Enabled = false
     game.Lighting.Bloom:Destroy()
