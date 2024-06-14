@@ -258,14 +258,6 @@ Section:NewButton("Самоубийство вариант 2", "Вы умира�
     game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 
--- Emergency shutdown noclip
-Section:NewButton("Экстренное отключения noclip", "В случае если не работает noclip.", function()
-local PlayerPositions = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    wait(1)
-    game.Players.LocalPlayer.Character.Humanoid.Health = 0
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = PlayerPositions
-end)
-
 -- Save Zone
 Section:NewButton("Безопасная зона", "Вы перемещаетесь под землю.", function()
 backPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
