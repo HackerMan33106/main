@@ -179,7 +179,8 @@ local function autoFarm()
                                 game:GetService("Players").LocalPlayer.Backpack.Events.HotkeyEvent:FireServer("Light Punch", true, false)
                             end
                             game:GetService("Players").LocalPlayer.Backpack.Events.HotkeyEvent:FireServer("Kick", true, false)
-                            local abilityPath = game:GetService("Workspace").KikaplayYT.Scripts.Controls.Abilities
+                            local PlayerName = LocalPlayer.Name
+                            local abilityPath = game:GetService("Workspace"):FindFirstChild(PlayerName).Scripts.Controls.Abilities
                             for _, abilityName in ipairs(abilities) do
                                 if abilityPath:FindFirstChild(abilityName) then
                                     game:GetService("Players").LocalPlayer.Backpack.Events.HotkeyEvent:FireServer(abilityName, true, false)
@@ -435,7 +436,8 @@ local function autoFarm()
                                 game:GetService("Players").LocalPlayer.Backpack.Events.HotkeyEvent:FireServer("Light Punch", true, false)
                             end
                             game:GetService("Players").LocalPlayer.Backpack.Events.HotkeyEvent:FireServer("Kick", true, false)
-                            local abilityPath = game:GetService("Workspace").KikaplayYT.Scripts.Controls.Abilities
+                            local PlayerName = LocalPlayer.Name
+                            local abilityPath = game:GetService("Workspace"):FindFirstChild(PlayerName).Scripts.Controls.Abilities
                             for _, abilityName in ipairs(abilities) do
                                 if abilityPath:FindFirstChild(abilityName) then
                                     game:GetService("Players").LocalPlayer.Backpack.Events.HotkeyEvent:FireServer(abilityName, true, false)
