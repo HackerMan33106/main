@@ -96,7 +96,7 @@ local itemsToSell = {
     {nameWithSpace = "Leather", nameWithoutSpace = "Leather", price = 1500},
     {nameWithSpace = "Meteorite Shard", nameWithoutSpace = "MeteoriteShard", price = 2000},
     {nameWithSpace = "Pure Meteorite Shard", nameWithoutSpace = "PureMeteoriteShard", price = 20000},
-    {nameWithSpace = "Steel ball", nameWithoutSpace = "Steelball", price = 3000},
+    {nameWithSpace = "Steel Ball", nameWithoutSpace = "SteelBall", price = 3000},
     {nameWithSpace = "Gold Ingot", nameWithoutSpace = "GoldIngot", price = 10000},
     {nameWithSpace = "Steel Ingot", nameWithoutSpace = "SteelIngot", price = 1500},
     {nameWithSpace = "Stone", nameWithoutSpace = "Stone", price = 500},
