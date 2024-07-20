@@ -531,7 +531,7 @@ function autoFarmZombie()
     spawn(monitorHeight)
 end
 
--- Zombie Auto Farm
+-- Dio Brando Auto Farm
 local player = game.Players.LocalPlayer
 local humanoidRootPart = player.Character:WaitForChild("HumanoidRootPart")
 
