@@ -105,7 +105,7 @@ local function checkHeight()
         if isReturnEnabled then
             if humanoidRootPart then
                 local yPosition = humanoidRootPart.Position.Y
-                if yPosition < 0 or yPosition > 500 then
+                if yPosition < 600 or yPosition > 1500 then
                     humanoidRootPart.CFrame = targetCFrame
                     createBox()
                     checkHeightTriggered = true
