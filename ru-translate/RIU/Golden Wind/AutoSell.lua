@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Robojini-GUI/main/GUI"))()
-local Window = Library.CreateLib("Roblox Is Unbreakable V1.1 - Phantom Blood Ru - AutoSell", "RJTheme1")
+local Window = Library.CreateLib("Roblox Is Unbreakable V1.1 - Golden Wind Ru - AutoSell", "RJTheme1")
 
 -- 1 Section Teleporting
 local Tab = Window:NewTab("Авто продажа")
