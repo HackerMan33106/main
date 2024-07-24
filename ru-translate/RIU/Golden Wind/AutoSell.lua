@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Robojini-GUI/main/GUI"))()
-local Window = Library.CreateLib("Roblox Is Unbreakable V1.1 - Golden Wind Ru - AutoSell", "RJTheme1")
+local Window = Library.CreateLib("Roblox Is Unbreakable V1.2 - Golden Wind Ru - AutoSell", "RJTheme1")
 
 -- 1 Section Teleporting
 local Tab = Window:NewTab("Авто продажа")
@@ -43,6 +43,14 @@ local itemsToSell = {
     {nameWithSpace = "Blackmore's Umbrella", nameWithoutSpace = "BlackmoresUmbrella", price = 35000, autoSell = false, nameRussian = "зонта Блэкмора", nameRussianForDropdown = "Зонт Блэкмора"},
     {nameWithSpace = "Gyro's Teddy Bear", nameWithoutSpace = "GyrosTeddyBear", price = 35000, autoSell = false, nameRussian = "плюшевого мишки Джайро", nameRussianForDropdown = "Плюшевый мишка Джайро"},
     {nameWithSpace = "Horseshoe", nameWithoutSpace = "Horseshoe", price = 35000, autoSell = false, nameRussian = "подков", nameRussianForDropdown = "Подкова"},
+    {nameWithSpace = "Left Leg of the Saint's Corpse", nameWithoutSpace = "LeftLegoftheSaintsCorpse", price = 20000, autoSell = false, nameRussian = "левой ноги святого трупа", nameRussianForDropdown = "Левая нога святого трупа"},
+    {nameWithSpace = "Right Leg of the Saint's Corpse", nameWithoutSpace = "RightLegoftheSaintsCorpse", price = 30000, autoSell = false, nameRussian = "левой ноги святого трупа", nameRussianForDropdown = "Левая нога святого трупа"},
+    {nameWithSpace = "Left Arm of the Saint's Corpse", nameWithoutSpace = "LeftArmoftheSaintsCorpse", price = 60000, autoSell = false, nameRussian = "левой руки святого трупа", nameRussianForDropdown = "Левая рука святого трупа"},
+    {nameWithSpace = "Right Arm of the Saint's Corpse", nameWithoutSpace = "RightArmoftheSaintsCorpse", price = 30000, autoSell = false, nameRussian = "правой руки святого трупа", nameRussianForDropdown = "Правая рука святого трупа"},
+    {nameWithSpace = "Ribcage of the Saint's Corpse", nameWithoutSpace = "RibcageoftheSaintsCorpse", price = 35000, autoSell = false, nameRussian = "грудной клетки святого трупа", nameRussianForDropdown = "Грудная клетка святого трупа"},
+    {nameWithSpace = "Heart of the Saint's Corpse", nameWithoutSpace = "HeartoftheSaintsCorpse", price = 60000, autoSell = false, nameRussian = "сердца святого трупа", nameRussianForDropdown = "Сердце святого трупа"},
+    {nameWithSpace = "Eye of the Saint's Corpse", nameWithoutSpace = "EyeoftheSaintsCorpse", price = 35000, autoSell = false, nameRussian = "глаза святого трупа", nameRussianForDropdown = "Глаз святого трупа"},
+    {nameWithSpace = "Skull of the Saint's Corpse", nameWithoutSpace = "SkulloftheSaintsCorpse", price = 40000, autoSell = false, nameRussian = "черепа святого трупа", nameRussianForDropdown = "Череп святого трупа"},
 }
 
 local function getCashAmount()
