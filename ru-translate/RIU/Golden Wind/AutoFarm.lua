@@ -12,7 +12,7 @@ local humanoid = game:GetService('Players').LocalPlayer.Character:FindFirstChild
 local isEnabled = false
 local selectedEnemy = nil
 local initialPosition = nil
-local targetCFrame = CFrame.new(372.002289, 30.8957806, 3871.77686, -0.116508633, -4.07337026e-08, 0.993189692, -9.74306147e-09, 1, 3.98700806e-08, -0.993189692, -5.03149966e-09, -0.116508633)
+local targetCFrame = CFrame.new(933.573914, 552.094543, -999.070801, -0.97075057, 2.71007434e-06, -0.240090311, -5.90356876e-06, 1, 3.51574672e-05, 0.240090311, 3.55465199e-05, -0.97075057)
 local maxKills = 10
 local isReturnEnabled = true
 local checkHeightTriggered = false
@@ -221,13 +221,13 @@ local function monitorHeight()
         if isReturnEnabled then
             if humanoidRootPart then
                 local yPosition = humanoidRootPart.Position.Y
-                if yPosition < 0 or yPosition > 500 then
+                if yPosition < 600 or yPosition > 1500 then
                     humanoidRootPart.CFrame = targetCFrame
                     repeat
                         createBox()
                         task.wait(1)
                         yPosition = humanoidRootPart.Position.Y
-                    until yPosition >= 0 and yPosition <= 500
+                    until yPosition >= 600 and yPosition <= 1500
                     autoFarm()
                 end
             end
@@ -248,7 +248,6 @@ local function updateEnemyList(dropdown)
     dropdown:Refresh(enemyNames)
 end
 
--- Включение/выключение автофарма
 Section:NewToggle("Вкл/выкл авто фарм врагов", "Вкл/выкл автоматический фарм врагов.", function(AFE)
     if AFE then
         if selectedEnemy then
@@ -311,7 +310,7 @@ local humanoid = game:GetService('Players').LocalPlayer.Character:FindFirstChild
 local isEnabled = false
 local selectedPlayer = nil
 local initialPosition = nil
-local targetCFrame = CFrame.new(372.002289, 30.8957806, 3871.77686, -0.116508633, -4.07337026e-08, 0.993189692, -9.74306147e-09, 1, 3.98700806e-08, -0.993189692, -5.03149966e-09, -0.116508633)
+local targetCFrame = CFrame.new(933.573914, 552.094543, -999.070801, -0.97075057, 2.71007434e-06, -0.240090311, -5.90356876e-06, 1, 3.51574672e-05, 0.240090311, 3.55465199e-05, -0.97075057)
 local maxKills = 10
 local isReturnEnabled = true
 local checkHeightTriggered = false
@@ -403,7 +402,7 @@ local function checkHeight()
         if isReturnEnabled then
             if humanoidRootPart then
                 local yPosition = humanoidRootPart.Position.Y
-                if yPosition < 0 or yPosition > 500 then
+                if yPosition < 600 or yPosition > 1500 then
                     humanoidRootPart.CFrame = targetCFrame
                     createBox()
                     checkHeightTriggered = true
@@ -478,13 +477,13 @@ local function monitorHeight()
         if isReturnEnabled then
             if humanoidRootPart then
                 local yPosition = humanoidRootPart.Position.Y
-                if yPosition < 0 or yPosition > 500 then
+                if yPosition < 600 or yPosition > 1500 then
                     humanoidRootPart.CFrame = targetCFrame
                     repeat
                         createBox()
                         task.wait(1)
                         yPosition = humanoidRootPart.Position.Y
-                    until yPosition >= 0 and yPosition <= 500
+                    until yPosition >= 600 and yPosition <= 1500
                     autoFarm()
                 end
             end
