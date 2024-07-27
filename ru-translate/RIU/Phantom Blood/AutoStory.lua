@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Robojini-GUI/main/AutoStoryGui.lua"))()
-local Window = Library.CreateLib("Roblox Is Unbreakable V1.0 - Phantom Blood Ru - Auto Story", "RJTheme6")
+local Window = Library.CreateLib("Roblox Is Unbreakable V1.1 - Phantom Blood Ru - Auto Story", "RJTheme6")
 
 -- 1 Section Auto(Bugged)
 local Tab = Window:NewTab("Авто прохождение")
