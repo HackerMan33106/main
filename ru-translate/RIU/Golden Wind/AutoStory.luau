@@ -382,41 +382,41 @@ local Section = Tab:NewSection("Пошаговое прохождение 5 ча
 Section:NewLabel("Если вы не хотите получить баги следуйте заданой")
 Section:NewLabel("последовательности кнопок.")
 
-Section:NewButton("Koichi Luggage Quest", "Первый квест", function()
+Section:NewButton("Koichi Luggage Quest", "Выполнение первого квеста", function()
     FirstQuest()
 end)
 
-Section:NewButton("Giorno Luca Quest", "Второй квест", function()
+Section:NewButton("Giorno Luca Quest", "Выполнение второго квеста", function()
     SecondQuest()
 end)
 
-Section:NewButton("Koichi Passport Quest", "Третий квест", function()
+Section:NewButton("Koichi Passport Quest", "Выполнение третьего квеста", function()
     ThreeQuest()
 end)
 
-Section:NewButton("Giorno Bruno Quest", "Четвёртый квест", function()
+Section:NewButton("Giorno Bruno Quest", "Выполнение четвёртого квеста", function()
     FourQuest()
 end)
 
-Section:NewButton("Passione Quest", "Пятый квест", function()
+Section:NewButton("Passione Quest", "Выполнение пятого квеста", function()
     FiveQuest()
     enableChestTP()
     wait(150)
     FiveQuest_One()
 end)
 
-Section:NewButton("Bruno Gang Quest", "Шестой квест", function()
+Section:NewButton("Bruno Gang Quest", "Выполнение шестого квеста", function()
     SixQuest()
 end)
 
-Section:NewButton("MrX Quest", "Седьмой квест", function()
+Section:NewButton("MrX Quest", "Выполнение седьмого квеста", function()
     SevenQuest()
 end)
 
-Section:NewButton("Risotto Bruno Quest", "Восьмой квест", function()
+Section:NewButton("Risotto Bruno Quest", "Выполнение восьмого квеста", function()
     EightQuest()
 end)
 
-Section:NewButton("MrX Bruno Quest", "Девятый квест", function()
+Section:NewButton("MrX Bruno Quest", "Выполнение девятого квеста", function()
     NineQuest()
 end)
