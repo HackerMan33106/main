@@ -105,7 +105,7 @@ local function checkHeight()
         if isReturnEnabled then
             if humanoidRootPart then
                 local yPosition = humanoidRootPart.Position.Y
-                if yPosition < 600 or yPosition > 1500 then
+                if yPosition < 0 or yPosition > 1500 then
                     humanoidRootPart.CFrame = targetCFrame
                     createBox()
                     checkHeightTriggered = true
@@ -221,13 +221,13 @@ local function monitorHeight()
         if isReturnEnabled then
             if humanoidRootPart then
                 local yPosition = humanoidRootPart.Position.Y
-                if yPosition < 600 or yPosition > 1500 then
+                if yPosition < 0 or yPosition > 1500 then
                     humanoidRootPart.CFrame = targetCFrame
                     repeat
                         createBox()
                         task.wait(1)
                         yPosition = humanoidRootPart.Position.Y
-                    until yPosition >= 600 and yPosition <= 1500
+                    until yPosition >= 0 and yPosition <= 1500
                     autoFarm()
                 end
             end
@@ -402,7 +402,7 @@ local function checkHeight()
         if isReturnEnabled then
             if humanoidRootPart then
                 local yPosition = humanoidRootPart.Position.Y
-                if yPosition < 600 or yPosition > 1500 then
+                if yPosition < 0 or yPosition > 1500 then
                     humanoidRootPart.CFrame = targetCFrame
                     createBox()
                     checkHeightTriggered = true
@@ -477,13 +477,13 @@ local function monitorHeight()
         if isReturnEnabled then
             if humanoidRootPart then
                 local yPosition = humanoidRootPart.Position.Y
-                if yPosition < 600 or yPosition > 1500 then
+                if yPosition < 0 or yPosition > 1500 then
                     humanoidRootPart.CFrame = targetCFrame
                     repeat
                         createBox()
                         task.wait(1)
                         yPosition = humanoidRootPart.Position.Y
-                    until yPosition >= 600 and yPosition <= 1500
+                    until yPosition >= 0 and yPosition <= 1500
                     autoFarm()
                 end
             end
