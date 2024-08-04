@@ -36,6 +36,7 @@ local itemsToSell = {
     {nameWithSpace = "Wood", nameWithoutSpace = "Wood", price = 500, autoSell = false, nameRussian = "дерева", nameRussianForDropdown = "Дерево"},
     {nameWithSpace = "Locacaca", nameWithoutSpace = "Locacaca", price = 40000, autoSell = false, nameRussian = "локакаки", nameRussianForDropdown = "Локакака"},
     {nameWithSpace = "Arrow", nameWithoutSpace = "Arrow", price = 5000, autoSell = false, nameRussian = "стрелы", nameRussianForDropdown = "Стрела"},
+    {nameWithSpace = "Requiem Arrow", nameWithoutSpace = "RequiemArrow", price = 80000, autoSell = false, nameRussian = "реквием стрелы", nameRussianForDropdown = "Реквием стрела"},
     {nameWithSpace = "Killer Tie", nameWithoutSpace = "KillerTie", price = 20000, autoSell = false, nameRussian = "убийственных галстуков", nameRussianForDropdown = "Убийственный галстук"},
     {nameWithSpace = "Passione Badge", nameWithoutSpace = "PassioneBadge", price = 35000, autoSell = false, nameRussian = "значков Passione", nameRussianForDropdown = "Значок Passione"},
     {nameWithSpace = "Ladybug Brooch", nameWithoutSpace = "LadybugBrooch", price = 35000, autoSell = false, nameRussian = "броши с божьей коровкой", nameRussianForDropdown = "Брошь с божьей коровкой"},
