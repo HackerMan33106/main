@@ -117,7 +117,6 @@ local function updateItemDropdown(dropdown)
         local symbol = item.autoSell and "✅" or "❌"
         table.insert(dropdownItems, symbol .. item.nameRussianForDropdown .. symbol)
     end
-    dropdown:Refresh(dropdownItems)
 end
 
 local function createItemDropdown()
