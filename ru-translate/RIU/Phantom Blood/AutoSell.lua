@@ -5,6 +5,9 @@ local Window = Library.CreateLib("Roblox Is Unbreakable V1.3 - Phantom Blood Ru 
 local Tab = Window:NewTab("Авто продажа")
 local Section = Tab:NewSection("Автоматическая продажа предметов")
 
+local Tab = Window:NewTab("Авто продажа")
+local Section = Tab:NewSection("Автоматическая продажа предметов")
+
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local isRunning = false
@@ -74,14 +77,11 @@ local function sellItem(item)
 end
 
 local function autoSellItems()
-    while isRunning and (not useMaxLimit or getCashAmount() < maxCashAmount) do
-        for _, item in ipairs(itemsToSell) do
-            if item.autoSell and (not useMaxLimit or getCashAmount() < maxCashAmount) then
-                sellItem(item)
-                wait(0.01)
-            end
+    for _, item in ipairs(itemsToSell) do
+        if item.autoSell and (not useMaxLimit or getCashAmount() < maxCashAmount) then
+            sellItem(item)
+            wait(0.01)
         end
-        wait(0.01)
     end
 end
 
@@ -90,14 +90,14 @@ local function checkCashAndSell()
         if not useMaxLimit or getCashAmount() < maxCashAmount then
             autoSellItems()
         end
-        wait(0.01)
+        wait(0.1)
     end
 end
 
 Section:NewToggle("Авто продажа", "Вкл/выкл автоматическую продажу.", function(AutoSell)
     isRunning = AutoSell
     if isRunning then
-        checkCashAndSell()
+        spawn(checkCashAndSell)
     end
 end)
 
@@ -118,6 +118,7 @@ local function updateItemDropdown(dropdown)
         local symbol = item.autoSell and "✅" or "❌"
         table.insert(dropdownItems, symbol .. item.nameRussianForDropdown .. symbol)
     end
+    dropdown:Refresh(dropdownItems)
 end
 
 local function createItemDropdown()
