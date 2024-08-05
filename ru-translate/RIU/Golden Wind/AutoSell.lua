@@ -44,7 +44,7 @@ local itemsToSell = {
     {nameWithSpace = "Blackmore's Umbrella", nameWithoutSpace = "BlackmoresUmbrella", price = 35000, autoSell = false, nameRussian = "зонта Блэкмора", nameRussianForDropdown = "Зонт Блэкмора"},
     {nameWithSpace = "Gyro's Teddy Bear", nameWithoutSpace = "GyrosTeddyBear", price = 35000, autoSell = false, nameRussian = "плюшевого мишки Джайро", nameRussianForDropdown = "Плюшевый мишка Джайро"},
     {nameWithSpace = "Horseshoe", nameWithoutSpace = "Horseshoe", price = 35000, autoSell = false, nameRussian = "подков", nameRussianForDropdown = "Подкова"},
-    {nameWithSpace = "DIO's Diary", nameWithoutSpace = "DIOsDiary", price = 40000, autoSell = false, nameRussian = "дневников Дио", nameRussianForDropdown = "Дневник Дио"},
+    {nameWithSpace = "DIO's Diary", nameWithoutSpace = "DiosDiary", price = 40000, autoSell = false, nameRussian = "дневников Дио", nameRussianForDropdown = "Дневник Дио"},
     {nameWithSpace = "Left Leg of the Saint's Corpse", nameWithoutSpace = "LeftLegoftheSaintsCorpse", price = 20000, autoSell = false, nameRussian = "левой ноги святого трупа", nameRussianForDropdown = "Левая нога святого трупа"},
     {nameWithSpace = "Right Leg of the Saint's Corpse", nameWithoutSpace = "RightLegoftheSaintsCorpse", price = 30000, autoSell = false, nameRussian = "левой ноги святого трупа", nameRussianForDropdown = "Левая нога святого трупа"},
     {nameWithSpace = "Left Arm of the Saint's Corpse", nameWithoutSpace = "LeftArmoftheSaintsCorpse", price = 60000, autoSell = false, nameRussian = "левой руки святого трупа", nameRussianForDropdown = "Левая рука святого трупа"},
