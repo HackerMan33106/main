@@ -5,9 +5,6 @@ local Window = Library.CreateLib("Roblox Is Unbreakable V1.3 - Golden Wind Ru - 
 local Tab = Window:NewTab("Авто продажа")
 local Section = Tab:NewSection("Автоматическая продажа предметов")
 
-local Tab = Window:NewTab("Авто продажа")
-local Section = Tab:NewSection("Автоматическая продажа предметов")
-
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local isRunning = false
