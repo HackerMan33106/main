@@ -116,7 +116,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         Section:NewLabel("Буст к деньгам: " .. cashboost)
         if cashboost == "✅Есть✅" then
             local CashBoostTime = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("CashBoostTime")
-            Section:NewLabel("Он ещё будет длится : " .. CashBoostTime .. " секунд")
+            Section:NewLabel("Он ещё будет длиться: " .. CashBoostTime .. " секунд")
         end
 
         local ExperienceBoost = game:GetService("Workspace"):FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("ExperienceBoost")
@@ -136,7 +136,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         
         local ExperienceBoostTime = game:GetService("Workspace"):FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("ExperienceBoostTime")
         if experienceboost == "✅Есть✅" then
-        Section:NewLabel("Он ещё будет длится : " .. ExperienceBoostTime .. " секунд")
+        Section:NewLabel("Он ещё будет длиться:: " .. ExperienceBoostTime .. " секунд")
         else
         
         end
@@ -152,7 +152,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         Section:NewLabel("Количество опыта: " .. Experience)
 
         local HealthRegen = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("HealthRegen")
-        Section:NewLabel("Количество регенирируемых ХП: " .. HealthRegen)
+        Section:NewLabel("Количество регенерируемых ХП: " .. HealthRegen)
 
         local MaxHealth = workspace:FindFirstChild(PlayerName):FindFirstChild("Humanoid").MaxHealth
         Section:NewLabel("Максимум ХП: " .. MaxHealth)
@@ -179,10 +179,10 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         Section:NewLabel("Есть токенов: " .. Tokens)
 
         local SpawnPoint_PhantomBlood = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("SpawnPoint_GoldenWind")
-        Section:NewLabel("Точка спана в Phantom Blood: " .. SpawnPoint_PhantomBlood)
+        Section:NewLabel("Точка спавна в Phantom Blood: " .. SpawnPoint_PhantomBlood)
 
         local SpawnPoint_GoldenWind = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("SpawnPoint_PhantomBlood")
-        Section:NewLabel("Точка спана в Golden Wind: " .. SpawnPoint_GoldenWind)
+        Section:NewLabel("Точка спавна в Golden Wind: " .. SpawnPoint_GoldenWind)
 
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -199,6 +199,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         Section:NewLabel("Остальная одежда: " .. OutfitMisc)
 
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        --[[
 
         local Tab = Window:NewTab("Очки навыков")
         local SkillPoints = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("SkillPoints")
@@ -208,12 +209,13 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         local SpecialitySkillPoints = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("SpecialitySkillPoints")
         local StandSkillPoints = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("StandSkillPoints")
         local WeaponSkillPoints = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("WeaponSkillPoints")
-        Section:NewLabel("Количество потреченных очков на\n  вкладку Player: " .. PlayerSkillPoints)
-        Section:NewLabel("Количество потреченных очков на\n  вкладку Stand: " .. StandSkillPoints)
-        Section:NewLabel("Количество потреченных очков на\n  вкладку Speciality: " .. SpecialitySkillPoints)
-        Section:NewLabel("Количество потреченных очков на\n  вкладку Weapon: " .. WeaponSkillPoints)
+        Section:NewLabel("Количество потраченных очков на\n  вкладку Player: " .. PlayerSkillPoints)
+        Section:NewLabel("Количество потраченных очков на\n  вкладку Stand: " .. StandSkillPoints)
+        Section:NewLabel("Количество потраченных очков на\n  вкладку Speciality: " .. SpecialitySkillPoints)
+        Section:NewLabel("Количество потраченных очков на\n  вкладку Weapon: " .. WeaponSkillPoints)
         Section:NewLabel("Всего очков: " .. Level)
 
+        --]]
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         local Tab = Window:NewTab("Оружие")
@@ -259,13 +261,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
             Section:NewLabel("У папки 'Inventory' было изменено название или\n  её место нахождение.")
         end
 
-        ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            
-        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/PinfoGUIRight.lua"))()
-        local Window = Library.CreateLib("Информация о игроке №2", "RJTheme3")
-
-        local Tab = Window:NewTab("Чертежи")
+                    local Tab = Window:NewTab("Чертежи")
         local Section = Tab:NewSection("Чертежи и их количество")
         
         local Schematics = workspace:FindFirstChild(PlayerName).PlayerStatistics.Inventory:FindFirstChild("Schematics")
@@ -289,12 +285,16 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
                 end
             end
         else
-            Section:NewLabel("У папки 'Schematics' было измено название или\n  её место нахождение.")
+            Section:NewLabel("У папки 'Schematics' было изменено название или\n  её место нахождение.")
         end
-
+            
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/PinfoGUIRight.lua"))()
+        local Window = Library.CreateLib("Информация о игроке №2", "RJTheme3")
 
-        local Tab = Window:NewTab("Части трупа")
+        local Tab = Window:NewTab("Части святого трупа")
         local heartEquipped = game:GetService("Workspace"):FindFirstChild(PlayerName).PlayerStatistics.Inventory.SaintsCorpse:FindFirstChild("Heart"):GetAttribute("Heart_Equipped")
         local heartMerged = game:GetService("Workspace"):FindFirstChild(PlayerName).PlayerStatistics.Inventory.SaintsCorpse:FindFirstChild("Heart"):GetAttribute("Heart_Merged")
         
