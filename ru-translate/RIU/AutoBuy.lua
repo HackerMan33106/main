@@ -15,7 +15,7 @@ local itemsToBuy = {
     {name = "SteelBall", autoBuy = false, nameRussian = "стального шара", nameRussianForDropdown = "Стальной шар"},
     {name = "Arrow", autoBuy = false, nameRussian = "стрелы", nameRussianForDropdown = "Стрела"},
     {name = "Locacaca", autoBuy = false, nameRussian = "локакаки", nameRussianForDropdown = "Локакака"},
-    {name = "RequiemArrow", autoBuy = false, nameRussian = "реквием стрелы", nameRussianForDropdown = "Стрела реквием"}
+    {name = "RequiemArrow", autoBuy = false, nameRussian = "реквием стрелы", nameRussianForDropdown = "Реквием стрела"}
 }
 
 local function buyItem(item)
