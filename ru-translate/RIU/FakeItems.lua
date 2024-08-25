@@ -1,4 +1,3 @@
---!nocheck
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/GUI.lua"))()
 local Window = Library.CreateLib("Roblox Is Unbreakable V1.6 - Phantom Blood Ru", "RJTheme1")
 
