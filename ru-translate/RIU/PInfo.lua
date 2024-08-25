@@ -101,7 +101,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
 
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        local Tab = Window:NewTab("Остальныя инфа")
+        local Tab = Window:NewTab("Остальная инфа")
         local BannedBefore = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("BannedBefore")
         local banned = BannedBefore and "✅Да✅" or "❌Нет❌"
         Section = Tab:NewSection("Был забанен ранее: " .. banned)
