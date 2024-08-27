@@ -46,7 +46,7 @@ local function toggleSpectate(playerName)
         else
             game.StarterGui:SetCore("SendNotification", {
                 Title = "Ошибка",
-                Text = "Игрок с именем " .. playerName .. " не найден",
+                Text = "Игрок с ником " .. playerName .. " не найден",
                 Duration = 3
             })
         end
