@@ -2,11 +2,11 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacke
 local Window = Library.CreateLib("Roblox Is Unbreakable V1.6 - Phantom Blood Ru", "RJTheme1")
 
 -- 1 Section number of items
-local Tab = Window:NewTab("Количество пердметов")
-local Section = Tab:NewSection("Выбор количества предмето которые вы \n хотите себе выдать")
+local Tab = Window:NewTab("Количество предметов")
+local Section = Tab:NewSection("Выбор количества предметов которые вы \n хотите себе выдать")
 
 Value = 1
-Section:NewTextBox("Впешите число", "Это число влияет на то сколько вы получите \n предметов за 1 нажатее.", function(V)
+Section:NewTextBox("В пишите число", "Это число влияет на то сколько вы получите \n предметов за 1 нажатее.", function(V)
     Value = V
 end)
 
