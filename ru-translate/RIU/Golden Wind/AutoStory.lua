@@ -379,7 +379,7 @@ end)
 local Tab = Window:NewTab("Пошаговое прохождение")
 local Section = Tab:NewSection("Пошаговое прохождение 5 части")
 
-Section:NewLabel("Если вы не хотите получить баги следуйте заданой")
+Section:NewLabel("Если вы не хотите получить баги следуйте заданной")
 Section:NewLabel("последовательности кнопок.")
 
 Section:NewButton("Koichi Luggage Quest", "Выполнение первого квеста", function()
