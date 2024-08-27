@@ -38,7 +38,7 @@ local function updateDropdown(dropdown)
         table.insert(playerNames, player.Name)
     end
     
-    dropdown:Refresh(playerNames, true)
+    dropdown:Refresh(playerNames, true) 
 end
 
 local dropdown = Section:NewDropdown("Выбор игрока", "Выберите игрока о котором вы хотите узнать инфу.", {}, function(selectedPlayer)
@@ -46,9 +46,10 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
     if targetPlayer and targetPlayer:FindFirstChild("HumanoidRootPart") then
         clearWindow()
         local PlayerName = selectedPlayer
+        local PlayerDisplayName = playerService:FindFirstChild(PlayerName).DisplayName
 
         local Tab = Window:NewTab("Игрок")
-        local Section = Tab:NewSection("Выбранный игрок: " .. PlayerName)
+        local Section = Tab:NewSection("Выбранный игрок: " .. PlayerName .. " (" .. PlayerDisplayName .. ")")
         Section:NewButton("Скопировать ник выбранного игрока", "Нажмите чтобы скопировать.", function()
             setclipboard(PlayerName)
         end)
@@ -116,7 +117,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         Section:NewLabel("Буст к деньгам: " .. cashboost)
         if cashboost == "✅Есть✅" then
             local CashBoostTime = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("CashBoostTime")
-            Section:NewLabel("Он ещё будет длиться: " .. CashBoostTime .. " секунд")
+            Section:NewLabel("Он ещё будет длится: " .. CashBoostTime .. " секунд")
         end
 
         local ExperienceBoost = game:GetService("Workspace"):FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("ExperienceBoost")
@@ -136,7 +137,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         
         local ExperienceBoostTime = game:GetService("Workspace"):FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("ExperienceBoostTime")
         if experienceboost == "✅Есть✅" then
-        Section:NewLabel("Он ещё будет длиться:: " .. ExperienceBoostTime .. " секунд")
+        Section:NewLabel("Он ещё будет длится: " .. ExperienceBoostTime .. " секунд")
         else
         
         end
@@ -178,10 +179,10 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         local Tokens = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("Tokens")
         Section:NewLabel("Есть токенов: " .. Tokens)
 
-        local SpawnPoint_PhantomBlood = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("SpawnPoint_GoldenWind")
+        local SpawnPoint_PhantomBlood = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("SpawnPoint_PhantomBlood")
         Section:NewLabel("Точка спавна в Phantom Blood: " .. SpawnPoint_PhantomBlood)
 
-        local SpawnPoint_GoldenWind = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("SpawnPoint_PhantomBlood")
+        local SpawnPoint_GoldenWind = workspace:FindFirstChild(PlayerName).PlayerStatistics:GetAttribute("SpawnPoint_GoldenWind")
         Section:NewLabel("Точка спавна в Golden Wind: " .. SpawnPoint_GoldenWind)
 
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -261,7 +262,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
             Section:NewLabel("У папки 'Inventory' было изменено название или\n  её место нахождение.")
         end
 
-                    local Tab = Window:NewTab("Чертежи")
+        local Tab = Window:NewTab("Чертежи")
         local Section = Tab:NewSection("Чертежи и их количество")
         
         local Schematics = workspace:FindFirstChild(PlayerName).PlayerStatistics.Inventory:FindFirstChild("Schematics")
@@ -287,7 +288,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         else
             Section:NewLabel("У папки 'Schematics' было изменено название или\n  её место нахождение.")
         end
-            
+
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             
@@ -447,9 +448,7 @@ end)
 local Tab = Window:NewTab("Информация")
 local Section = Tab:NewSection("1. Если вместо информации просто пустое место это\n   значит что у него ничего нет в информации о нём.")
 local Section = Tab:NewSection("2. Информация не обновляется в настоящем времени.\n   Будет добавлено в следующих обновлениях.")
-local Section = Tab:NewSection("3. Просмотр очков работает по какой-то причине\n    не правильно. Будет исправлено в")
-local Section = Tab:NewSection("следующих обновлениях.")
+local Section = Tab:NewSection("3. Просмотр очков работает по какой-то причине\n    не правильно. Будет исправлено в\n   следующих обновлениях.")
 local Section = Tab:NewSection('4. В остальной информации есть пункт "Буст к опыту"\n    и с пятницы до воскресенья там будет написано')
-local Section = Tab:NewSection('"Включён бесплатный выходной буст" тут имеется\n   введу то что в RIU с пятницы до воскресенья даётся')
-local Section = Tab:NewSection("бесплатный буст к опыту.")
+local Section = Tab:NewSection('"Включён бесплатный выходной буст" тут имеется\n   введу то что в RIU с пятницы до воскресенья даётся\n   бесплатный буст к опыту.')
 local Section = Tab:NewSection("При выборе игрока выбор самого себя сделан\n специально чтобы узнать о себе больше инфы.")
