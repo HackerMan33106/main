@@ -11,8 +11,8 @@ Section:NewTextBox("Type in the number", "This number affects how many items you
 end)
 
 -- 2 Section add items
-local Tab = Window:NewTab("Get item")
-local Section = Tab:NewSection("Receiving fake items")
+local Tab = Window:NewTab("Add items")
+local Section = Tab:NewSection("Add fake items")
         
 local ignoreAttributes = {
     ClassName = true,
@@ -38,7 +38,7 @@ if Inventory then
     end)
 
     for _, attribute in ipairs(attributes) do
-        Section:NewButton("Get item: " .. attribute.name, "When you press the button, you are given the \n   selected item.", function()
+        Section:NewButton("Add item: " .. attribute.name, "When you press the button, you are given the \n   selected item.", function()
             local currentCount = Inventory:GetAttribute(attribute.name) or 0
             Inventory:SetAttribute(attribute.name, currentCount + Value)
         end)
