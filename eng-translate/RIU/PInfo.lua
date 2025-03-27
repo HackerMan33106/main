@@ -1,4 +1,3 @@
---!nocheck
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/PinfoGUILeft.lua"))()
 local Window = Library.CreateLib("Information about player #1", "RJTheme3")
 
