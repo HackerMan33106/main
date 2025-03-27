@@ -1,3 +1,4 @@
+--!nocheck
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/PinfoGUILeft.lua"))()
 local Window = Library.CreateLib("Информация о игроке №1", "RJTheme3")
 
@@ -84,15 +85,15 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         local Tab = Window:NewTab("Стенды в хранилище")
-        local StandInStorage1 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage.Slot1:GetAttribute("Slot1_StandSkin")
+        local StandInStorage1 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot1_StandSkin")
         Section = Tab:NewSection("Ячейка 1: " .. StandInStorage1)
 
-        local StandInStorage2 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage.Slot2:GetAttribute("Slot2_StandSkin")
-        local StandInStorage3 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage.Slot3:GetAttribute("Slot3_StandSkin")
-        local StandInStorage4 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage.Slot4:GetAttribute("Slot4_StandSkin")
-        local StandInStorage5 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage.Slot5:GetAttribute("Slot5_StandSkin")
-        local StandInStorage6 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage.Slot6:GetAttribute("Slot6_StandSkin")
-        local StandInStorage7 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage.Slot7:GetAttribute("Slot7_StandSkin")
+        local StandInStorage2 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot2_StandSkin")
+        local StandInStorage3 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot3_StandSkin")
+        local StandInStorage4 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot4_StandSkin")
+        local StandInStorage5 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot5_StandSkin")
+        local StandInStorage6 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot6_StandSkin")
+        local StandInStorage7 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot7_StandSkin")
         Section:NewLabel("Ячейка 2: " .. StandInStorage2)
         Section:NewLabel("Ячейка 3: " .. StandInStorage3)
         Section:NewLabel("Ячейка 4: " .. StandInStorage4)
