@@ -1,3 +1,4 @@
+--!nocheck
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/PinfoGUILeft.lua"))()
 local Window = Library.CreateLib("Information about player #1", "RJTheme3")
 
@@ -94,12 +95,14 @@ local dropdown = Section:NewDropdown("Player selection", "Select the player you 
         local StandInStorage5 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot5_StandSkin")
         local StandInStorage6 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot6_StandSkin")
         local StandInStorage7 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot7_StandSkin")
+        local StandStorageSlots = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("StandStorageSlots")
         Section:NewLabel("Cell 2: " .. StandInStorage2)
         Section:NewLabel("Cell 3: " .. StandInStorage3)
         Section:NewLabel("Cell 4: " .. StandInStorage4)
         Section:NewLabel("Cell 5: " .. StandInStorage5)
         Section:NewLabel("Cell 6: " .. StandInStorage6)
         Section:NewLabel("Cell 7: " .. StandInStorage7)
+        Section:NewLabel("Total cells available: " .. StandStorageSlots)
 
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
