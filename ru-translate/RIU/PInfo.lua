@@ -1,3 +1,4 @@
+--!nocheck
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/PinfoGUILeft.lua"))()
 local Window = Library.CreateLib("Информация о игроке №1", "RJTheme3")
 
@@ -93,12 +94,14 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         local StandInStorage5 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot5_StandSkin")
         local StandInStorage6 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot6_StandSkin")
         local StandInStorage7 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot7_StandSkin")
+        local StandStorageSlots = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("StandStorageSlots")
         Section:NewLabel("Ячейка 2: " .. StandInStorage2)
         Section:NewLabel("Ячейка 3: " .. StandInStorage3)
         Section:NewLabel("Ячейка 4: " .. StandInStorage4)
         Section:NewLabel("Ячейка 5: " .. StandInStorage5)
         Section:NewLabel("Ячейка 6: " .. StandInStorage6)
         Section:NewLabel("Ячейка 7: " .. StandInStorage7)
+        Section:NewLabel("Всего доступных ячеек: " .. StandStorageSlots)
 
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
