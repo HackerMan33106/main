@@ -85,23 +85,29 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         local Tab = Window:NewTab("Стенды в хранилище")
+        local StandStorageSlots = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("StandStorageSlots")
+        Section = Tab:NewSection("Всего доступных ячеек: " .. StandStorageSlots)
+        
         local StandInStorage1 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot1_StandSkin")
-        Section = Tab:NewSection("Ячейка 1: " .. StandInStorage1)
+        Section:NewLabel("Ячейка 1: " .. StandInStorage1)
 
         local StandInStorage2 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot2_StandSkin")
+        Section:NewLabel("Ячейка 2: " .. (StandStorageSlots >= 2 and StandInStorage2 or "❌Недоступно❌"))
+        
         local StandInStorage3 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot3_StandSkin")
+        Section:NewLabel("Ячейка 3: " .. (StandStorageSlots >= 3 and StandInStorage3 or "❌Недоступно❌"))
+        
         local StandInStorage4 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot4_StandSkin")
+        Section:NewLabel("Ячейка 4: " .. (StandStorageSlots >= 4 and StandInStorage4 or "❌Недоступно❌"))
+        
         local StandInStorage5 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot5_StandSkin")
+        Section:NewLabel("Ячейка 5: " .. (StandStorageSlots >= 5 and StandInStorage5 or "❌Недоступно❌"))
+        
         local StandInStorage6 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot6_StandSkin")
+        Section:NewLabel("Ячейка 6: " .. (StandStorageSlots >= 6 and StandInStorage6 or "❌Недоступно❌"))
+        
         local StandInStorage7 = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("Slot7_StandSkin")
-        local StandStorageSlots = workspace:FindFirstChild(PlayerName).PlayerStatistics.StandStorage:GetAttribute("StandStorageSlots")
-        Section:NewLabel("Ячейка 2: " .. StandInStorage2)
-        Section:NewLabel("Ячейка 3: " .. StandInStorage3)
-        Section:NewLabel("Ячейка 4: " .. StandInStorage4)
-        Section:NewLabel("Ячейка 5: " .. StandInStorage5)
-        Section:NewLabel("Ячейка 6: " .. StandInStorage6)
-        Section:NewLabel("Ячейка 7: " .. StandInStorage7)
-        Section:NewLabel("Всего доступных ячеек: " .. StandStorageSlots)
+        Section:NewLabel("Ячейка 7: " .. (StandStorageSlots >= 7 and StandInStorage7 or "❌Недоступно❌"))
 
         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
