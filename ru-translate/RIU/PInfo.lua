@@ -264,7 +264,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
         
             for _, attribute in ipairs(attributes) do
                 if attribute.value > 0 then
-                    Section:NewLabel("Предмета" .. attribute.name .. ": " .. attribute.value)
+                    Section:NewLabel("Предмета " .. attribute.name .. ": " .. attribute.value)
                 end
             end
         else
