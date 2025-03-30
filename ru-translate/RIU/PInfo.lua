@@ -440,6 +440,10 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
     end
 end)
 
+-- Обновление списка при запуске
+updateDropdown(dropdown)
+
+-- Автоматическое обновление при входе и выходе игроков
 playerService.PlayerAdded:Connect(function()
     updateDropdown(dropdown)
 end)
@@ -448,10 +452,7 @@ playerService.PlayerRemoving:Connect(function()
     updateDropdown(dropdown)
 end)
 
-updateDropdown(dropdown)
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-- Кнопка для ручного обновления списка
 Section:NewButton("Обновить список игроков", "Обновляет список игроков.", function()
     updateDropdown(dropdown)
 end)
