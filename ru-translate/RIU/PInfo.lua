@@ -1,5 +1,5 @@
 --!nocheck
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/PinfoGUILeft.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/GUIs/PinfoGUILeft.lua"))()
 local Window = Library.CreateLib("Информация о игроке №1", "RJTheme3")
 
 local Tab = Window:NewTab("Выбор игрока")
