@@ -280,7 +280,7 @@ end)
 
 -- ESP
 Section:NewButton("ESP", "Вы теперь видете игроков через стены.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/ESP/main/ESP.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/ESP/ESP.lua", true))()
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -386,19 +386,19 @@ local Tab = Window:NewTab("Другие скрипты")
 local Section = Tab:NewSection("Скрипты")
 
 -- DarkDex
-Section:NewDropdown("Выбор версии DarkDex", "Несколько версий DarkDex.", {"DarkDex V4", "DarkDex V3", "DarkDex V1.1.0 Alpha"}, function(dex)
+Section:NewDropdown("Selecting a version of DarkDex", "A few versions of DarkDex.", {"DarkDex V4", "DarkDex V3", "DarkDex V1.1.0 Alpha"}, function(dex)
 if dex == "DarkDex V4" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V4", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/DarkDex-V4.lua", true))()
 elseif dex == "DarkDex V3" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V3", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/DarkDex-V3.lua", true))()
 elseif dex == "DarkDex V1.1.0 Alpha" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V1.1.0%20Alpha", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/DarkDex-V1.1.0-Alpha.lua", true))()
     end
 end)
 
 -- Infinite Yeild
-Section:NewButton("Заинжектить Infinite Yeild", "Вы внедряете Infinite Yeild.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Infinite-yeild/main/Infiniteyeild.lua", true))()
+Section:NewButton("Inject Infinite Yeild", "You inject Infinite Yeild.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/Infiniteyeild.lua", true))()
 end)
 
 -- Your script
