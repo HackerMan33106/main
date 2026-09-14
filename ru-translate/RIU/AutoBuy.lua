@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/GUI.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/GUIs/GUI.lua"))()
 local Window = Library.CreateLib("Roblox Is Unbreakable V1.1 - AutoBuy", "RJTheme1")
 
 -- 1 Section Buying
