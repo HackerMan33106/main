@@ -280,7 +280,7 @@ end)
 
 -- ESP
 Section:NewButton("ESP", "You can see the players through the wall.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/ESP/main/ESP.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/ESP/ESP.lua", true))()
 end)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -388,17 +388,17 @@ local Section = Tab:NewSection("Scripts")
 -- DarkDex
 Section:NewDropdown("Selecting a version of DarkDex", "A few versions of DarkDex.", {"DarkDex V4", "DarkDex V3", "DarkDex V1.1.0 Alpha"}, function(dex)
 if dex == "DarkDex V4" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V4", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/DarkDex-V4.lua", true))()
 elseif dex == "DarkDex V3" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V3", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/DarkDex-V3.lua", true))()
 elseif dex == "DarkDex V1.1.0 Alpha" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/DarkDex/main/DarkDex-V1.1.0%20Alpha", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/DarkDex-V1.1.0-Alpha.lua", true))()
     end
 end)
 
 -- Infinite Yeild
 Section:NewButton("Inject Infinite Yeild", "You inject Infinite Yeild.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Infinite-yeild/main/Infiniteyeild.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/Infiniteyeild.lua", true))()
 end)
 
 -- Your script
