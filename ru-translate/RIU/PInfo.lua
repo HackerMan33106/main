@@ -304,7 +304,7 @@ local dropdown = Section:NewDropdown("Выбор игрока", "Выберит�
             ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                 
-            local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/GUIs/main/PinfoGUIRight.lua"))()
+            local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/GUIs/PinfoGUIRight.lua"))()
             local Window = Library.CreateLib("Информация о игроке №2", "RJTheme3")
 
             local Tab = Window:NewTab("Части святого трупа")
