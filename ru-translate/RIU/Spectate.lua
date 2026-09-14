@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Robojini-GUI/main/SpectateGui.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/main/refs/heads/main/Other/GUIs/SpectateGui.lua"))()
 local Window = Library.CreateLib("Spectate script 1.1", "RJTheme1")
 
 -- 1 Section Spectate
